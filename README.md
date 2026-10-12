@@ -60,10 +60,11 @@ Here **neb_gpr.py** use the scripting function in i-pi to perform the active lea
 ## 3. Usage ##
 (1) Source the env.sh file
 
-source ./i-pi/env.sh
+`source ./i-pi/env.sh`
 
-(2) Run the active learning code. The entry file for scripting is ./i-pi/gpr_script/neb_gpr.py
-python3 -u ./i-pi/gpr_script/neb_gpr.py input.xml 
+(2) Run the active learning code. The entry file for scripting is `./i-pi/gpr_script/neb_gpr.py`
+
+`python3 -u ./i-pi/gpr_script/neb_gpr.py input.xml` 
 
 (3) Run the electronic structure code that handshake with the i-PI. 
 
