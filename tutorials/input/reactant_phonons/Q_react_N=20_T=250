@@ -1,0 +1,20 @@
+
+We are ready to start. Reading RESTART ... (This can take a while)
+
+Temperature: 250.0 K
+NBEADS: 1
+atoms:  9
+ASR:    poly
+1/(betaP*hbar) =  0.00079
+Diagonalization ... 
+
+
+Final lowest 10 frequencies (cm^-1)
+[293.41 304.23 402.93 523.72 790.82 894.85 924.58 1008.51 1012.54 1046.42]
+
+We are done. Reactants. Nbeads 40
+Qtras(bohr^-3) | Qrot     | logQvib_rp
+        67.341 | 51359.128 | -85.116
+
+A file with the frequencies in atomic units was generated
+

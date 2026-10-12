@@ -1,0 +1,1 @@
+ab initio calculation number (including initial training data):  28

@@ -1,0 +1,9 @@
+step   optimization_step   ab_initio_calculation_number 
+0 0 10 
+2 52 12 
+4 54 14 
+6 56 16 
+8 58 18 
+10 60 20 
+12 67 22 
+14 88 33 

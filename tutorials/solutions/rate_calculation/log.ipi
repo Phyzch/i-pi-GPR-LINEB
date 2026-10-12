@@ -1,0 +1,185 @@
+ # @simulation: Fetchingffsocket
+ # Initializing system object 
+ # Initializing simulation object 
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+ # Binding the forces 
+Import of PyFFTW unsuccessful, using NumPy library instead
+Created inet socket with address localhost and port number 31415
+ @ForceField: Starting the polling thread main loop.
+ # i-PI loaded input file:  input.xml
+All non-redundant singular values: [4.21792763 3.08235539 2.38095226 2.00082635 1.96974452 1.76275516 1.73413322 1.65218138 1.62941664 1.58918857 1.2363796  1.1883881  1.18615813 1.13829382 0.98613899 0.75345991 0.7482747  0.67199274 0.65370215 0.42742185 0.40207674]
+Number of nonzero dofs: 21
+GPytorch for force prediction:
+CUDA is not available. Running Gpytorch on CPU.
+ !W! @Warning: Planar molecules? The changes of cartesian coordinate are small.  dofs: [2, 5, 8, 11, 13, 14, 17, 23, 26].Cartesian coordinate change [0.00041024 0.00026112 0.0003957  0.00012163 0.00072524 0.00029559 0.00044993 0.00028496 0.00088747]
+@For Fixing internal dofs: for reference, train_inputs_change: [0.82438525 1.77552843 3.63323947 0.14426523 0.17478771 0.41809581 0.42914727 0.19550888 4.97208033 0.03911923 0.06713614 0.08441698 4.45981741 0.01419706 2.60012713 0.01362842 0.04199558 0.12228177 0.07220361 0.02216736 0.01428373].
+Make sure cutoff value for fixing internal dofs is appropriate. Current value: 0.001
+@gpr_model: load fixed internal dofs.
+@gpr_model: For Fixing internal dofs: fixed_internal_dofs: []
+@gpr_model: free moving dofs: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]
+successfully load the gpr model in gprtools.py
+Training data successfully stored in neb_final_gpr_training/training_data.h5
+data for coordinate transformer successfully stored
+the time used for construct                 gpr model to predict force along instanton path is: 0.035561536116666716 min
+
+
+@initial gpr training info: check the overfitting and underfitting of kernel length scale
+
+
+@initial Gaussian Process Regression fitting:
+error of potential prediction: [0.00002004 0.00004014 0.00000458 0.00000715 0.00000206 0.00000988 0.0000125  0.00003026 0.00000867 0.00000122 0.00003332 0.00000858 0.0000272  0.00001776 0.00004289 0.00005935 0.000005   0.00001827 0.00001814 0.0000037  0.00001541 0.00000695 0.00001267 0.00008685 0.0000097  0.00000876 0.00000966 0.0000135 ]
+error of force prediction: [0.01317744 0.01223751 0.01290574 0.01456651 0.04097684 0.06402463 0.05807852 0.01196171 0.01154593 0.01392778 0.02117209 0.01169877 0.01286328 0.01357402 0.01076826 0.01470612 0.0115838  0.01111773 0.0122552  0.01336294 0.02128837 0.01544191 0.01666582 0.01186281 0.04840102 0.06073689 0.04740097 0.03427979]
+
+
+@initial gpr training info: Test Overfitting of GPR model.
+The error in test set can be large if we start the model with a small number of data.
+In this case, the test data is out of trust region of the model.
+ @SOCKET:   Client asked for connection from ('127.0.0.1', 57333). Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+ @NEB Outerloop STEP 0, stage: instanton
+Skip neb stage. Go directly into instanton stage. 
+
+Now generate instanton path from Minimum Action Path (MAP) found by NEB.
+total optimization step for neb stage: 0
+use cubic interpolation to generate MAP path
+step number: 100
+r_distance: 0.22192523565840286,  v_r: 0.002131851421514813
+total energy: -0.004101275688171887
+step number: 200
+r_distance: 0.7406103327642157,  v_r: 0.0022569654959892897
+total energy: -0.004101271428720183
+step number: 300
+r_distance: 0.9944591333110708,  v_r: 0.0001411472884664911
+total energy: -0.004102343626329329
+Type of calculation: rate
+final r at the end of dynamical evolution: 0.9953629046978548
+total energy during evolution: [-0.004101275688171887, -0.004101271428720183, -0.004102343626329329]
+finish evolution of dynamics along Minimum Action path, the period of motion is: 1273.3142884000047
+temperature for instanton path : 247.9942815904246 K
+the running time for the constrained dynamics along the path is: 0.14202316458333328 min.
+imaginary time list for ring polymer: [ 15.91642861  47.74928582  79.58214303 111.41500024 143.24785745 175.08071466 206.91357187 238.74642908 270.57928629 302.4121435  334.24500071 366.07785792 397.91071513 429.74357234 461.57642955 493.40928676 525.24214397 557.07500118 588.90785839 620.7407156 ]
+ # Average timings at MD step       0. t/step: 8.70332e+00
+read_gpr_hessian_folder not provided. Will create gpr_hessian model from training data in gpr model.
+ @get_hessian: Computing hessian
+ @get_hessian: Computing hessian: 1 of 27
+ @get_hessian: Computing hessian: 2 of 27
+ @get_hessian: Computing hessian: 3 of 27
+ @get_hessian: Computing hessian: 4 of 27
+ @get_hessian: Computing hessian: 5 of 27
+ @get_hessian: Computing hessian: 6 of 27
+ @get_hessian: Computing hessian: 7 of 27
+ @get_hessian: Computing hessian: 8 of 27
+ @get_hessian: Computing hessian: 9 of 27
+ @get_hessian: Computing hessian: 10 of 27
+ @get_hessian: Computing hessian: 11 of 27
+ @get_hessian: Computing hessian: 12 of 27
+ @get_hessian: Computing hessian: 13 of 27
+ @get_hessian: Computing hessian: 14 of 27
+ @get_hessian: Computing hessian: 15 of 27
+ @get_hessian: Computing hessian: 16 of 27
+ @get_hessian: Computing hessian: 17 of 27
+ @get_hessian: Computing hessian: 18 of 27
+ @get_hessian: Computing hessian: 19 of 27
+ @get_hessian: Computing hessian: 20 of 27
+ @get_hessian: Computing hessian: 21 of 27
+ @get_hessian: Computing hessian: 22 of 27
+ @get_hessian: Computing hessian: 23 of 27
+ @get_hessian: Computing hessian: 24 of 27
+ @get_hessian: Computing hessian: 25 of 27
+ @get_hessian: Computing hessian: 26 of 27
+ @get_hessian: Computing hessian: 27 of 27
+error after forward & backward transform the gradient: [0.00050994]
+relative hessian error after forward & backward transform of hessian: [0.00249401]
+GPytorch for force & hessian prediction.
+CUDA is not available. Running Gpytorch on CPU.
+ !W! @Warning: Planar molecules? The changes of cartesian coordinate are small.  dofs: [2, 5, 8, 11, 13, 14, 17, 23, 26]. cartesian coordinate change [0.00041024 0.00026112 0.0003957  0.00012163 0.00072524 0.00029559 0.00044993 0.00028496 0.00088747]
+Currently fixed cartesian dofs: [ 2  5  8 10 11 13 17 20 23 26]
+@For selecting internal dofs to include in the GPR model: for reference, train_inputs_change: [0.00240523 0.00032397 0.000069   0.18455009 0.13077529 0.33765319 0.39154268 0.23570927 0.00124913 0.01191049 0.06429168 0.01168415 0.00036303 0.01835674 0.00040361 0.01902251 0.03612061 0.09965872 0.05807716 0.03428101 0.01492378].
+@gpr_hessian_model: rigid internal dofs [ 0  1  2  8  9 11 12 13 14 15 20]
+@gpr_hessian_model: free moving dofs [ 3  4  5  6  7 10 16 17 18 19]
+The file None/gpr_hessian.pth does not exist. Can not load hyper-parameter for gpr hessian model. Need to train it.
+We are going to train the gpr model with hessian data.                This can be expensive. To add data without training the model, set train_hessian_model_bool= False 
+hessian free training for GPR model.
+train the model with only potential and gradient information:
+Iter 0 - Loss: 36.585, mll: 37.033, prior: -0.448
+Iter 12 - Loss: -12.688
+time to compute the loss function: 0.22739341799999124 s
+the elapsed time for re-training the model is 0.026667680549999774 min.
+train data: error of potential prediction: [0.01412198 0.0138947  0.01471276 0.01564305 0.0150416  0.01263287 0.01377895 0.01085635 0.0061498  0.00577944 0.0010021  0.02987738 0.00933721 0.01443042 0.00590229 0.00531913 0.01222542 0.00250895 0.01310163 0.01474019 0.01410176 0.00645386 0.01067991 0.00319491 0.01560082 0.01480397 0.00968132 0.00612887 0.00316186]
+
+
+train data: error of force prediction: [0.07394111 0.05141258 0.04893281 0.09090983 0.17055492 0.17716384 0.13490468 0.05719315 0.06491673 0.04592819 0.05262084 0.06232619 0.04469008 0.03563344 0.05060999 0.04642969 0.04770172 0.05714497 0.04946659 0.04480586 0.05948174 0.07259777 0.05021448 0.06379459 0.14261771 0.09744341 0.06463712 0.06841097 0.0654829 ]
+train data: error in constrained internal dofs for force prediction (linear regression): [0.09998069 0.15571505 0.15661268 0.15259246 0.18337585 0.2124791  0.34864121 0.28575174 0.09216987 0.03814921 0.08578242 0.01109087 0.02226719 0.04687952 0.06305725 0.16644054 0.02564227 0.23027673 0.02239129 0.02689083 0.0611433  0.89695477 0.1848522  0.24405338 0.11174073 0.08242476 0.15219426 0.69952499 0.26146768]
+train data: error in free moving internal dofs for force prediction: (GPR model): [0.13233752 0.10907219 0.10084357 0.12837079 0.17387375 0.22031023 0.19384589 0.09977681 0.09708461 0.08160459 0.0759104  0.12582133 0.06709479 0.05865253 0.0807798  0.05295612 0.08720274 0.06787523 0.08872866 0.08248312 0.11513837 0.06707724 0.06789758 0.08877839 0.19493097 0.17756736 0.08955103 0.06688134 0.09470644]
+
+
+
+
+
+
+train data: frobenius norm for hessians [2.67634689]
+train data: relative hessian error for ring polymer beads: [0.01948111]
+train data: relative hessian error for constrained dofs (modeled by linear regression): [0.]
+train data: relative hessian error for cross term (modeled by linear regression): [0.]
+train data: relative hessian error for free moving dofs of ring polymers beads            (modeled by Gaussian Process Regression): [0.03374372]
+
+
+
+
+ @get_hessian_beadwise: Computing hessian for bead 1 of 9
+ @get_hessian_beadwise: Computing hessian for bead 2 of 9
+ @get_hessian_beadwise: Computing hessian for bead 3 of 9
+ @get_hessian_beadwise: Computing hessian for bead 4 of 9
+ @get_hessian_beadwise: Computing hessian for bead 5 of 9
+ @get_hessian_beadwise: Computing hessian for bead 6 of 9
+ @get_hessian_beadwise: Computing hessian for bead 7 of 9
+ @get_hessian_beadwise: Computing hessian for bead 8 of 9
+ @get_hessian_beadwise: Computing hessian for bead 9 of 9
+We are going to train the gpr model with hessian data.                This can be expensive. To add data without training the model, set train_hessian_model_bool= False 
+hessian free training for GPR model.
+train the model with only potential and gradient information:
+Iter 0 - Loss: -19.387, mll: -20.181, prior: 0.794
+Iter 10 - Loss: -23.633
+time to compute the loss function: 0.2074850020003396 s
+the elapsed time for re-training the model is 0.014827002083332748 min.
+train data: error of potential prediction: [0.00895281 0.0059204  0.0025861  0.0002005  0.00199803 0.00256071 0.0002629  0.00138733 0.00737583 0.00493561 0.00067473 0.01511697 0.00379856 0.00456117 0.00055279 0.00180981 0.00416188 0.0006105  0.00474039 0.00480856 0.00008904 0.00095058 0.00066285 0.00173434 0.00017291 0.00039513 0.00144433 0.00123935 0.0017612  0.00079488 0.00042739 0.00026764 0.00005199 0.00036451 0.00163045 0.00131867 0.00119702 0.00073062]
+
+
+train data: error of force prediction: [0.03849176 0.05081243 0.04987559 0.06654652 0.14010667 0.14571501 0.1124691  0.06187685 0.03840793 0.0364662  0.04552283 0.0335389  0.03243104 0.03249068 0.02960704 0.04804161 0.03356007 0.04805645 0.03313004 0.02943965 0.03965404 0.06509915 0.03993301 0.04994127 0.09630966 0.09272504 0.04213782 0.05373284 0.05301994 0.02966612 0.0422651  0.05941582 0.08754802 0.100551   0.0611018  0.0493026  0.06863308 0.09617638]
+train data: error in constrained internal dofs for force prediction (linear regression): [0.09998069 0.15571505 0.15661268 0.15259246 0.18337585 0.2124791  0.34864121 0.28575174 0.09216987 0.03814921 0.08578242 0.01109087 0.02226719 0.04687952 0.06305725 0.16644054 0.02564227 0.23027673 0.02239129 0.02689083 0.0611433  0.89695477 0.1848522  0.24405338 0.11174073 0.08242476 0.15219426 0.69952499 0.26146768 0.22197505 0.19880521 0.16237677 0.13686535 0.10564037 0.12206519 0.28911405 1.26602628 0.54168389]
+train data: error in free moving internal dofs for force prediction: (GPR model): [0.08975916 0.0990675  0.10192949 0.12380949 0.1773112  0.1364369  0.15244482 0.09651752 0.07895671 0.06553304 0.05016842 0.08573227 0.06138657 0.07048002 0.0351825  0.05133968 0.08239989 0.04039044 0.06773593 0.06690141 0.08388408 0.04065525 0.05023848 0.04935829 0.14811731 0.20723459 0.04508956 0.04566918 0.06141179 0.03433491 0.03572685 0.0385329  0.06692739 0.15133958 0.06574889 0.03274517 0.05620004 0.07385066]
+
+
+
+
+
+
+train data: frobenius norm for hessians [2.67634689 2.67184899 2.66766802 2.66489078 2.66346308 2.66234139 2.66260963 2.66411124 2.66691109 2.67136081]
+train data: relative hessian error for ring polymer beads: [0.01512703 0.01190083 0.01525684 0.01585105 0.02104118 0.03983831 0.07147683 0.02768992 0.02466468 0.04283365]
+train data: relative hessian error for constrained dofs (modeled by linear regression): [0.00065695 0.00095772 0.00096646 0.00074364 0.00151309 0.00107107 0.00108581 0.00053496 0.00063473 0.00110587]
+train data: relative hessian error for cross term (modeled by linear regression): [0.00621686 0.00337027 0.00605044 0.0051495  0.00496159 0.00597257 0.00297262 0.00350903 0.00250781 0.00614343]
+train data: relative hessian error for free moving dofs of ring polymers beads            (modeled by Gaussian Process Regression): [0.02732485 0.0243081  0.02490098 0.02591358 0.03564677 0.05351053 0.07381354 0.04341624 0.03827094 0.0509411 ]
+
+
+
+
+Training data successfully stored in grad# 38 hessian# 10/training_data.h5
+ @NEB Outerloop STEP 1, stage: instanton
+Now generate instanton path from Minimum Action Path (MAP) found by NEB.
+total optimization step for neb stage: 0
+ @NEB Outerloop STEP 2, stage: converged
+ab initio calculation number : 28
+the running time for the program: 20.3387005632 min.
+SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 8287805888)> neb calculation converged. Instanton geometry calculation finishes. Exiting simulation
+ !W! Soft exit has been requested with message: 'neb calculation converged. Instanton geometry calculation finishes. Exiting simulation
+I-PI reports success. Restartable as is: NO.'. Cleaning up.
+ @SOCKET: Shutting down the driver interface.
+ @SOCKET: Problem shutting down the server socket. Will just continue and hope for the best.
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step

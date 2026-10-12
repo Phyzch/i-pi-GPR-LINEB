@@ -1,0 +1,39 @@
+
+ ____       ____       ____       ____
+/    \     /    \     /    \     /    \
+|  #################################  |
+\__#_/     \____/     \____/     \_#__/
+   #    _        _______  _____    #
+   #   (_)      |_   __ \|_   _|   #      -*-     v 2.6.3  -*-
+   #   __  ______ | |__) | | |     #
+   Y  [  ||______||  ___/  | |     #      A Universal Force Engine
+  0 0  | |       _| |_    _| |_    #
+   #  [___]     |_____|  |_____|   #
+ __#_       ____       ____       _#__
+/  # \     /    \     /    \     / #  \
+|  #################################  |
+\____/     \____/     \____/     \____/
+
+    
+ # @simulation: Fetchingffsocket
+ # Initializing system object 
+ # Initializing simulation object 
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ !W! Overwriting previous cell parameters
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+ # Binding the forces 
+Created inet socket with address localhost and port number 31415
+ @ForceField: Starting the polling thread main loop.
+ # i-PI loaded input file:  input.xml
+ @SOCKET:   Client asked for connection from ('127.0.0.1', 57343). Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+ # Average timings at MD step       0. t/step: 4.82577e+00
+SOFTEXIT CALLED FROM THREAD <Thread(ThreadPoolExecutor-1_1, started 13472231424)> Dynamic matrix is calculated. Exiting simulation
+ !W! Soft exit has been requested with message: 'Dynamic matrix is calculated. Exiting simulation
+I-PI reports success. Restartable as is: NO.'. Cleaning up.
+ @SOCKET: Shutting down the driver interface.
+ @SOCKET: Problem shutting down the server socket. Will just continue and hope for the best.

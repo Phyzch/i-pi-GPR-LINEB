@@ -1,0 +1,37 @@
+echo
+Title "Malonaldehyde-ipi"
+
+start malonaldehyde-ipi
+
+
+geometry nocenter noautosym noautoz  
+ C                    -0.01363976    -0.04702016     0.00030081
+ O                    -0.04456780     1.19614275     0.00049561
+ H                     0.96690200    -0.55786712    -0.00004315
+ C                    -1.19142234    -0.87629207     0.00042243
+ H                    -1.10135334    -1.95603314     0.00018224
+ C                    -2.42725946    -0.29002370     0.00065889
+ H                    -3.34937015    -0.86923587     0.00054219
+ O                    -2.63727795     1.01577531     0.00096498
+ H                    -1.72841120     1.44215399     0.00087601
+end  
+
+basis spherical 
+* library 6-31g*
+end  
+
+dft
+  xc b3lyp
+  maxiter 500
+  mulliken
+  direct
+  disp vdw 3
+end
+
+
+
+driver
+  SOCKET IPI_CLIENT 
+end
+
+task dft optimize

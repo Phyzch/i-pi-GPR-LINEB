@@ -1,0 +1,2794 @@
+ # @simulation: Fetchingffsocket
+ # Initializing system object 
+ # Initializing simulation object 
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+ # Binding the forces 
+Import of PyFFTW unsuccessful, using NumPy library instead
+Created inet socket with address localhost and port number 31415
+ @ForceField: Starting the polling thread main loop.
+Backup performed: inst.out -> #inst.out#0#
+ # i-PI loaded input file:  input.xml
+All non-redundant singular values: [4.19781678 3.080187   2.38133203 2.00084577 1.96978146 1.76289825 1.7341411  1.65192243 1.62930753 1.58937725 1.23645898 1.18888571 1.18724404 1.1382017  0.98596675 0.75385395 0.74819029 0.67202768 0.6536084  0.42754378 0.40213441]
+Number of nonzero dofs: 21
+ @SOCKET:   Client asked for connection from ('127.0.0.1', 64878). Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+GPytorch for force prediction:
+CUDA is not available. Running Gpytorch on CPU.
+ !W! @Warning: Planar molecules? The changes of cartesian coordinate are small.  dofs: [2, 5, 8, 11, 13, 14, 17, 23, 26].Cartesian coordinate change [0.00041024 0.00026112 0.0003957  0.00012163 0.00072524 0.00015007 0.00044993 0.00028496 0.00088747]
+@For Fixing internal dofs: for reference, train_inputs_change: [0.82361593 1.78263791 2.34386236 0.13827164 0.16548881 0.39401355 0.42813818 0.17020869 4.95424176 0.02819994 0.06294429 0.10231893 3.6786577  0.01508025 2.60031489 0.01114319 0.04075878 0.11437175 0.06147091 0.01977595 0.01146633].
+Make sure cutoff value for fixing internal dofs is appropriate. Current value: 0.001
+@gpr_model: load fixed internal dofs.
+@gpr_model: For Fixing internal dofs: fixed_internal_dofs: []
+@gpr_model: free moving dofs: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]
+Iter 0 - Loss: 5.813
+Iter 14 - Loss: -3.144
+Training data successfully stored in neb_final_gpr_training/training_data.h5
+data for coordinate transformer successfully stored
+the time used for construct                 gpr model to predict force along instanton path is: 0.03888209929999995 min
+
+
+@initial gpr training info: check the overfitting and underfitting of kernel length scale
+
+
+@initial Gaussian Process Regression fitting:
+error of potential prediction: [0.00001287 0.00002249 0.00001243 0.0000171  0.00002276 0.00000122 0.00000058 0.00001577 0.00000924 0.00000374]
+error of force prediction: [0.01335807 0.01356303 0.01025077 0.01076241 0.01610321 0.01786069 0.01234243 0.01331716 0.01440444 0.01658044]
+
+
+@initial gpr training info: Test Overfitting of GPR model.
+The error in test set can be large if we start the model with a small number of data.
+In this case, the test data is out of trust region of the model.
+x[0] * 1/4 + x[1] * 3/4
+V error for test data 7.602190472387318e-06   V value: 0.0044888340923989745  predicted V value: 0.004488868217370744
+f error for test data 0.0264946333507534   force amplitude: 0.01681721982949779  predicted force amplitude:  0.016881842773920956
+
+
+x[3] * 1/4 + x[2] * 3/4
+V error for test data 3.0187438523981004e-05   V value: 0.005222994998121067  predicted V value: 0.00522283732928065
+f error for test data 0.025549537906695344   force amplitude: 0.01216571233868642  predicted force amplitude:  0.012166799090726437
+
+
+ @NEB Outerloop STEP 0, stage: neb
+Backup performed: inst.neb_instanton_initial__0.ener -> #inst.neb_instanton_initial__0.ener#0#
+Backup performed: inst.neb_instanton_initial__0.xyz -> #inst.neb_instanton_initial__0.xyz#0#
+Backup performed: inst.neb_instanton_0.ener -> #inst.neb_instanton_0.ener#0#
+Backup performed: inst.neb_instanton_0.xyz -> #inst.neb_instanton_0.xyz#0#
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 0, 
+               max force gradient for inner bead 2.81e-03, (condition 5.00e-03), 
+               max force gradient for end bead 3.86e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.82e-03 (condition 5.00e-03) 
+               action 0.9038469421721367 
+beads optimization gradient: [0.00038578 0.00088977 0.00280903 0.00125448 0.00114963 0.00112787 0.00095281 0.00237078 0.00047294 0.00022303]
+beads potential relative to instanton path energy (eV): [0.00002526 0.01478307 0.02820947 0.03835326 0.04381204 0.04380485 0.03834585 0.02819203 0.0147688  0.00001732]
+distance between beads in mass scaled coordinate: [2.39020499 2.39576181 2.3917925  2.39108218 2.39161951 2.39327523 2.39076307 2.39209296 2.38698907]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 0
+
+
+
+@early stop info: outer loop: 0,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 1, 
+               max force gradient for inner bead 2.73e-03, (condition 5.00e-03), 
+               max force gradient for end bead 3.76e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.37e-03 (condition 5.00e-03) 
+               action 0.9053588277073255 
+beads optimization gradient: [0.00037631 0.00088659 0.00272569 0.00120929 0.00118608 0.00114246 0.00112387 0.00070084 0.00048748 0.00025125]
+beads potential relative to instanton path energy (eV): [0.00002493 0.01478094 0.02820299 0.03835058 0.04380964 0.04380283 0.03834428 0.02901347 0.01476833 0.00001709]
+distance between beads in mass scaled coordinate: [2.39010934 2.395711   2.39176892 2.39104026 2.3915829  2.39325384 2.39078754 2.39211221 2.38690438]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 1
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 2 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.00010295 0.00029214 0.00101789 0.00044564 0.00039493 0.00038894 0.00031456 0.12669136 0.00008366 0.00003339]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 2, 
+               max force gradient for inner bead 1.70e-03, (condition 5.00e-03), 
+               max force gradient for end bead 4.91e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.32e-03 (condition 5.00e-03) 
+               action 0.9108786967371767 
+beads optimization gradient: [0.00049143 0.0010408  0.00101879 0.0016968  0.00123072 0.00116643 0.0011202  0.00086379 0.00046106 0.0002651 ]
+beads potential relative to instanton path energy (eV): [ 0.00002426  0.01477645  0.03059958  0.03981223  0.04380468  0.04379863  0.0383405   0.02901086  0.01476738 -0.00010655]
+distance between beads in mass scaled coordinate: [2.38988895 2.39580923 2.39172232 2.39095204 2.39151054 2.39321889 2.39076346 2.3921958  2.38673822]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 2
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 3 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.00030803 0.00088368 0.15343889 0.15352142 0.00120853 0.00118016 0.00106801 0.12661511 0.00025859 0.15364948]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 3, 
+               max force gradient for inner bead 1.71e-03, (condition 5.00e-03), 
+               max force gradient for end bead 5.02e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.24e-03 (condition 5.00e-03) 
+               action 0.9126827496005606 
+beads optimization gradient: [0.00050164 0.00107089 0.00048489 0.00171448 0.00134509 0.0011312  0.00113608 0.00105958 0.00046195 0.00026809]
+beads potential relative to instanton path energy (eV): [ 0.00002326  0.01476842  0.03058551  0.03980185  0.04461578  0.04407241  0.03849881  0.02900926  0.01476592 -0.00010497]
+distance between beads in mass scaled coordinate: [2.38937464 2.39617374 2.39159388 2.39080449 2.39140513 2.39318022 2.39067678 2.3922877  2.38615812]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 3
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 4 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.00066199 0.00185858 0.1534096  0.15345645 0.15340743 0.15343982 0.15370025 0.12652941 0.00053026 0.15367078]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 4, 
+               max force gradient for inner bead 1.33e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.60e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.22e-03 (condition 5.00e-03) 
+               action 0.9437102946183874 
+beads optimization gradient: [0.00260452 0.00108206 0.00089942 0.00104267 0.00132597 0.00111861 0.00109201 0.00100326 0.00046653 0.00026831]
+beads potential relative to instanton path energy (eV): [ 0.0052001   0.01849531  0.03057246  0.03978671  0.04460407  0.04406252  0.03849078  0.02900804  0.01476394 -0.00010155]
+distance between beads in mass scaled coordinate: [2.38850974 2.39675077 2.39138294 2.39059282 2.39127629 2.3931483  2.39055127 2.39234503 2.38520274]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 4
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 5 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1535697  0.15348266 0.15346996 0.15341401 0.15332864 0.15338015 0.15372434 0.12643414 0.00090985 0.15369769]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 5, 
+               max force gradient for inner bead 1.28e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.56e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.93e-03 (condition 5.00e-03) 
+               action 0.9433063951526435 
+beads optimization gradient: [0.00255851 0.00106375 0.00101831 0.00100819 0.00128458 0.00106187 0.00106186 0.00094535 0.00048026 0.00026899]
+beads potential relative to instanton path energy (eV): [ 0.0051073   0.01848071  0.0305605   0.03976981  0.04458889  0.04377027  0.0384816   0.02900614  0.01476148 -0.00009666]
+distance between beads in mass scaled coordinate: [2.40346003 2.39743826 2.39115248 2.39033378 2.39115132 2.39309996 2.39045158 2.39241682 2.38395353]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 5
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 6 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.15352536 0.15342756 0.1536496  0.15342219 0.1533004  0.00618602 0.15380285 0.12632677 0.00139712 0.15373059]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 6, 
+               max force gradient for inner bead 1.24e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.46e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.72e-03 (condition 5.00e-03) 
+               action 0.9435538064810902 
+beads optimization gradient: [0.00245902 0.00100868 0.00109693 0.00096717 0.00123842 0.00103212 0.00106024 0.00104804 0.00050881 0.00027146]
+beads potential relative to instanton path energy (eV): [ 0.00490723  0.0184621   0.03054523  0.03974905  0.04456783  0.04375393  0.03847069  0.02900184  0.01475816 -0.0000897 ]
+distance between beads in mass scaled coordinate: [2.43692812 2.39835775 2.39094223 2.39001938 2.39099496 2.3930333  2.39039974 2.39255572 2.38226434]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 6
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 7 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1535732  0.15339487 0.15372765 0.15352404 0.15336164 0.00888977 0.15403146 0.12619154 0.00208433 0.15377575]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 7, 
+               max force gradient for inner bead 1.20e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.30e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.39e-03 (condition 5.00e-03) 
+               action 0.9440125560460644 
+beads optimization gradient: [0.00229746 0.0009408  0.00114134 0.00092831 0.00119804 0.00096516 0.00104156 0.00092571 0.00054925 0.00027474]
+beads potential relative to instanton path energy (eV): [ 0.00458189  0.01843851  0.03052494  0.03972328  0.04453908  0.04373245  0.03845767  0.02899389  0.01475356 -0.00008036]
+distance between beads in mass scaled coordinate: [2.49215336 2.39955463 2.39076497 2.38965256 2.39081428 2.3929238  2.39041465 2.39279093 2.38007269]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 7
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 8 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.15402174 0.15342475 0.15379397 0.15377023 0.15358867 0.01234018 0.15452026 0.12603547 0.00306423 0.15383888]
+
+
+
+
+@Inner step summary: Outer loop # 0 , inner loop # 8, 
+               max force gradient for inner bead 2.81e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.06e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.16e-03 (condition 5.00e-03) 
+               action 0.9496999113976989 
+beads optimization gradient: [0.00206463 0.00084843 0.00121338 0.00087354 0.00118795 0.00091282 0.0007682  0.00281437 0.00051464 0.00032656]
+beads potential relative to instanton path energy (eV): [ 0.00411158  0.0184089   0.03049877  0.0396905   0.04450016  0.04370494  0.03843914  0.02898255  0.01671094 -0.00006836]
+distance between beads in mass scaled coordinate: [2.57287084 2.40091923 2.39057016 2.38929868 2.39064256 2.39272581 2.39062367 2.39317475 2.37731404]
+
+
+@Finish Inner loop: outer loop step 0, LI-NEB inner loop step 8
+
+
+
+
+
+
+@early stop info: outer loop: 0,  inner loop: 9 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.15545982 0.15357518 0.15413273 0.15421124 0.15409882 0.01664732 0.15527196 0.12589775 0.21171854 0.15392862]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 0,  inner loop: 9 
+bead index that cause early stop (starting from 0) : [8]
+distance for beads out of trust region: [0.21171854]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 9
+ # Average timings at MD step       0. t/step: 2.57321e+01
+Backup performed: RESTART -> #RESTART#0#
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 8
+Iter 0 - Loss: -3.088
+Iter 3 - Loss: -3.157
+@Outerloop Exit info: ab initio |f|: [0.01603317]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01497633]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.09698437]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.09698436527314144
+@Outerloop Exit info: |f_GPR -f| :[0.00155497]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01999068]
+@Outerloop Exit info: |f_GPR -f| :[0.00032051]
+Finish Outerloop: 1
+
+
+
+
+ @NEB Outerloop STEP 1, stage: neb
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 0, 
+               max force gradient for inner bead 1.40e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.87e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.83e-03 (condition 5.00e-03) 
+               action 0.9325991858548313 
+beads optimization gradient: [0.01872623 0.00101744 0.00137794 0.00095847 0.00121177 0.00087806 0.00067407 0.00139784 0.00023528 0.00026769]
+beads potential relative to instanton path energy (eV): [ 0.00334048  0.01724982  0.02927869  0.03862155  0.04378403  0.04371597  0.03828965  0.02816539  0.01476258 -0.00017085]
+distance between beads in mass scaled coordinate: [2.57287084 2.40091923 2.39057016 2.38929868 2.39064256 2.39272581 2.39062367 2.39317475 2.37731404]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 1
+
+
+
+@early stop info: outer loop: 1,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.15738615 0.15622675 0.15586685 0.15568595 0.15541187 0.01424719 0.16101619 0.10153751 0.         0.1577081 ]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 1, 
+               max force gradient for inner bead 1.78e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.05e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.42e-03 (condition 5.00e-03) 
+               action 0.9339578828993518 
+beads optimization gradient: [0.01053299 0.00118151 0.00153116 0.00087486 0.00118326 0.0008724  0.00080822 0.00177545 0.00028427 0.00027732]
+beads potential relative to instanton path energy (eV): [ 0.00187833  0.01508548  0.02756999  0.03757787  0.04341414  0.04390653  0.03879963  0.02871834  0.01515931 -0.0001541 ]
+distance between beads in mass scaled coordinate: [2.44014135 2.4399974  2.44005003 2.44006095 2.44005031 2.44005349 2.44003899 2.44009311 2.44002519]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 1
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 2 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16178011 0.15942544 0.1585312  0.15788081 0.15711885 0.02813008 0.16281841 0.10221924 0.00757836 0.15782616]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 2, 
+               max force gradient for inner bead 2.30e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.09e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.84e-03 (condition 5.00e-03) 
+               action 0.9278748110249236 
+beads optimization gradient: [0.00208715 0.00137273 0.00190117 0.00081142 0.00115769 0.00069509 0.00082423 0.00229698 0.00027925 0.00028952]
+beads potential relative to instanton path energy (eV): [-0.00035626  0.01307087  0.02598538  0.03658231  0.04301893  0.04402822  0.03921118  0.02918381  0.01545551 -0.00013076]
+distance between beads in mass scaled coordinate: [2.48519832 2.48520379 2.48506278 2.48518176 2.4850943  2.48518062 2.48510854 2.48519565 2.48512899]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 2
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 3 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17776701 0.17225406 0.16881717 0.16591838 0.16280905 0.0477966  0.16575095 0.10362222 0.01332958 0.15800343]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 3, 
+               max force gradient for inner bead 1.57e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.37e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.22e-03 (condition 5.00e-03) 
+               action 0.9311871731644902 
+beads optimization gradient: [0.00136654 0.00133259 0.00156912 0.00081402 0.00115806 0.00067948 0.00068321 0.00087225 0.00028568 0.00027751]
+beads potential relative to instanton path energy (eV): [ 0.00022921  0.01308109  0.02599361  0.036593    0.04303386  0.0440359   0.03921688  0.02918143  0.01545593 -0.00013544]
+distance between beads in mass scaled coordinate: [2.37745275 2.48482999 2.48508968 2.48522553 2.48503619 2.48522367 2.48500019 2.48509085 2.48605774]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 3
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 4 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17251955 0.17241111 0.16895679 0.16598747 0.16280128 0.04744755 0.16565534 0.10381947 0.01327906 0.15797177]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 4, 
+               max force gradient for inner bead 1.31e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.38e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.39e-03 (condition 5.00e-03) 
+               action 0.9311565980561113 
+beads optimization gradient: [0.00138256 0.00130981 0.00110258 0.00081722 0.00118466 0.00070512 0.00074004 0.00128982 0.00030594 0.00027743]
+beads potential relative to instanton path energy (eV): [ 0.00023243  0.01307416  0.02598674  0.03658932  0.04303124  0.0440336   0.03921558  0.02917798  0.01545549 -0.00013307]
+distance between beads in mass scaled coordinate: [2.37632445 2.48533653 2.48490488 2.48539832 2.48494217 2.4852239  2.48511267 2.4851554  2.48557055]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 4
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 5 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17239936 0.17235602 0.16890773 0.16595892 0.16266374 0.04752329 0.16572157 0.10390223 0.01328111 0.15799696]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 5, 
+               max force gradient for inner bead 1.32e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.27e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.37e-03 (condition 5.00e-03) 
+               action 0.9309162274348367 
+beads optimization gradient: [0.00127332 0.00127783 0.00050238 0.00082376 0.00119601 0.00069359 0.00075683 0.00131927 0.00031151 0.00027569]
+beads potential relative to instanton path energy (eV): [ 0.00021113  0.01306406  0.02597938  0.03658381  0.04302526  0.04403027  0.03921303  0.02917609  0.01545476 -0.0001296 ]
+distance between beads in mass scaled coordinate: [2.37949238 2.48596329 2.48460223 2.48571643 2.48482501 2.48522888 2.48521221 2.48519198 2.48484751]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 5
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 6 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17244155 0.17227755 0.16882534 0.16591601 0.16258765 0.04763745 0.16575619 0.10390072 0.01328555 0.15803353]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 6, 
+               max force gradient for inner bead 1.22e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.06e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.06e-03 (condition 5.00e-03) 
+               action 0.9304546339298648 
+beads optimization gradient: [0.00106462 0.0012221  0.00049335 0.00082408 0.00106516 0.00064869 0.0007166  0.00044184 0.00030185 0.00027161]
+beads potential relative to instanton path energy (eV): [ 0.00016895  0.01305091  0.0259729   0.03657646  0.04301565  0.04402591  0.03920922  0.02917588  0.01545373 -0.00012508]
+distance between beads in mass scaled coordinate: [2.38629476 2.48660272 2.48420314 2.4861829  2.48470342 2.48523831 2.48529573 2.48519573 2.48390002]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 6
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 7 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17261853 0.17217949 0.16873396 0.16586063 0.16265813 0.04779409 0.16576751 0.10381438 0.01329599 0.1580811 ]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 7, 
+               max force gradient for inner bead 1.49e-03, (condition 5.00e-03), 
+               max force gradient for end bead 8.08e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.10e-03 (condition 5.00e-03) 
+               action 0.9297161024100846 
+beads optimization gradient: [0.00080815 0.0011485  0.00119019 0.0008341  0.0011881  0.00063956 0.00070451 0.00148505 0.000303   0.00027138]
+beads potential relative to instanton path energy (eV): [ 0.000111    0.01303474  0.02596581  0.03656734  0.04301     0.04402045  0.03920429  0.02917484  0.01545243 -0.0001195 ]
+distance between beads in mass scaled coordinate: [2.39578276 2.48733254 2.48378711 2.48652365 2.48455957 2.48525204 2.48542718 2.48524359 2.48273222]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 7
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 8 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17288774 0.1720644  0.16865403 0.16579635 0.16261092 0.04800096 0.16580841 0.1037448  0.0133182  0.15813992]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 8, 
+               max force gradient for inner bead 1.52e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.22e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.93e-03 (condition 5.00e-03) 
+               action 0.9285831102967472 
+beads optimization gradient: [0.00062151 0.00107666 0.00151872 0.00084166 0.00119919 0.00062674 0.00066304 0.00128404 0.00031505 0.0002681 ]
+beads potential relative to instanton path energy (eV): [ 0.00004745  0.01301641  0.02595596  0.03655646  0.04300258  0.04401408  0.03919896  0.02917122  0.01545093 -0.00011312]
+distance between beads in mass scaled coordinate: [2.40612594 2.48830575 2.48323874 2.48698833 2.48439135 2.48526389 2.48561469 2.48534359 2.48140172]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 8
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 9 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17317207 0.1719415  0.16857697 0.16573094 0.16250962 0.04825426 0.16593535 0.10376233 0.01335649 0.15820776]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 9, 
+               max force gradient for inner bead 1.37e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.59e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.91e-03 (condition 5.00e-03) 
+               action 0.9263527581937244 
+beads optimization gradient: [0.00065876 0.00101008 0.00136723 0.00085806 0.00123455 0.00064022 0.00067235 0.00099363 0.00034317 0.00026489]
+beads potential relative to instanton path energy (eV): [-0.00001973  0.01299383  0.02594129  0.03654231  0.04298995  0.04400597  0.0391926   0.02916463  0.015449   -0.00010521]
+distance between beads in mass scaled coordinate: [2.41676203 2.48974187 2.48244053 2.4877404  2.48414497 2.48527587 2.48588874 2.48552292 2.47975111]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 9
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 10 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17341695 0.17180279 0.168475   0.16565852 0.16248064 0.04859545 0.16616769 0.10384309 0.01342322 0.15829299]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 10, 
+               max force gradient for inner bead 1.33e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.89e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.88e-03 (condition 5.00e-03) 
+               action 0.9263008035973861 
+beads optimization gradient: [0.00078933 0.00095346 0.00013063 0.00090161 0.00133465 0.00066384 0.00066552 0.00064415 0.00036906 0.00026209]
+beads potential relative to instanton path energy (eV): [-0.00007871  0.01296615  0.02592296  0.03652421  0.04297446  0.0439955   0.03918404  0.02915873  0.01544638 -0.00009549]
+distance between beads in mass scaled coordinate: [2.42531937 2.49167737 2.48142954 2.48862219 2.4838034  2.48530148 2.48619714 2.48571592 2.47770873]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 10
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 11 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17348585 0.17165552 0.16833363 0.16558227 0.16249965 0.04906264 0.16640062 0.10380556 0.01353657 0.1583996 ]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 11, 
+               max force gradient for inner bead 1.42e-03, (condition 5.00e-03), 
+               max force gradient for end bead 9.20e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.91e-03 (condition 5.00e-03) 
+               action 0.9261251361710267 
+beads optimization gradient: [0.00092039 0.00084495 0.00118719 0.00091996 0.00134336 0.00071172 0.00066919 0.00141565 0.00038402 0.00026249]
+beads potential relative to instanton path energy (eV): [-0.00011344  0.01293219  0.02590538  0.03649999  0.04295943  0.04398181  0.03917265  0.02915465  0.01544275 -0.00008368]
+distance between beads in mass scaled coordinate: [2.42869435 2.49370226 2.48014859 2.48961804 2.48347696 2.48534261 2.48654648 2.48591479 2.47519334]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 11
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 12 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17321253 0.17150608 0.16822845 0.16552573 0.16233074 0.04970942 0.16667119 0.10367368 0.01372996 0.1585326 ]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 12, 
+               max force gradient for inner bead 1.37e-03, (condition 5.00e-03), 
+               max force gradient for end bead 9.33e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.56e-03 (condition 5.00e-03) 
+               action 0.9257942253884435 
+beads optimization gradient: [0.00093282 0.00074687 0.00137249 0.00092257 0.00130466 0.00070568 0.00061578 0.00088723 0.00039725 0.00026137]
+beads potential relative to instanton path energy (eV): [-0.00011383  0.01289271  0.02588083  0.03646934  0.04293807  0.04396433  0.03916247  0.02914483  0.01543814 -0.00007004]
+distance between beads in mass scaled coordinate: [2.42503884 2.49640875 2.47848657 2.49103683 2.48299316 2.48536874 2.48700748 2.4862454  2.47225094]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 12
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 13 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17251258 0.17137183 0.16815519 0.16549886 0.16236741 0.05059771 0.16714912 0.10377775 0.01404317 0.15869227]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 13, 
+               max force gradient for inner bead 1.31e-03, (condition 5.00e-03), 
+               max force gradient for end bead 8.08e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.37e-03 (condition 5.00e-03) 
+               action 0.925275989990715 
+beads optimization gradient: [0.00080814 0.00068465 0.00016802 0.00092246 0.00130893 0.00071594 0.00067097 0.00041235 0.00041044 0.00026387]
+beads potential relative to instanton path energy (eV): [-0.00007315  0.01284708  0.02584889  0.03643045  0.04290632  0.04394203  0.0391482   0.02913531  0.0154321  -0.00005449]
+distance between beads in mass scaled coordinate: [2.41286957 2.49994996 2.47633904 2.49297398 2.48233358 2.4854593  2.48755135 2.48660811 2.46882263]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 13
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 14 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17131252 0.17126826 0.16809724 0.16554224 0.16257856 0.05181752 0.16754766 0.10373622 0.01454534 0.15888466]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 14, 
+               max force gradient for inner bead 1.88e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.12e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.22e-03 (condition 5.00e-03) 
+               action 0.9249020963154118 
+beads optimization gradient: [0.00071216 0.00056116 0.00187502 0.00080534 0.00108351 0.00064646 0.0007349  0.00151266 0.00040756 0.00027327]
+beads potential relative to instanton path energy (eV): [ 0.00000105  0.01279352  0.02581775  0.03638021  0.04286043  0.04391256  0.0391283   0.02912348  0.01542397 -0.000037  ]
+distance between beads in mass scaled coordinate: [2.39304207 2.50362192 2.47388075 2.49557921 2.48152658 2.48561627 2.48825824 2.48710591 2.4647975 ]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 14
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 15 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16965981 0.17121373 0.16817903 0.16574421 0.16273664 0.05353627 0.16814553 0.10380061 0.01535161 0.15912142]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 15, 
+               max force gradient for inner bead 1.60e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.29e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.53e-03 (condition 5.00e-03) 
+               action 0.9264997614171372 
+beads optimization gradient: [0.00072937 0.00056628 0.00080867 0.00105974 0.00157043 0.00099535 0.00092224 0.00160269 0.00047095 0.00028585]
+beads potential relative to instanton path energy (eV): [ 0.00007107  0.01273395  0.02576901  0.03632056  0.04279787  0.04387621  0.03910188  0.02910208  0.01541386 -0.00001843]
+distance between beads in mass scaled coordinate: [2.37225374 2.50894463 2.47089046 2.49875633 2.48067112 2.48583272 2.48926318 2.48786616 2.46034608]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 15
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 16 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16792211 0.1712463  0.16840216 0.1661589  0.16347269 0.05580544 0.16905116 0.10398565 0.01654729 0.15940568]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 16, 
+               max force gradient for inner bead 2.60e-03, (condition 5.00e-03), 
+               max force gradient for end bead 8.27e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.65e-03 (condition 5.00e-03) 
+               action 0.9263521829838203 
+beads optimization gradient: [0.00082687 0.00049528 0.0017891  0.0008838  0.00104107 0.00086392 0.00080574 0.00259503 0.00046637 0.0003215 ]
+beads potential relative to instanton path energy (eV): [0.00009534 0.01266703 0.02572921 0.03624426 0.04276701 0.04382548 0.03906654 0.02908588 0.01540015 0.00000033]
+distance between beads in mass scaled coordinate: [2.35800839 2.51347863 2.4682566  2.50071722 2.48016343 2.48604735 2.49055616 2.48868974 2.4554155 ]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 16
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 17 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16648865 0.17138574 0.16892464 0.16699021 0.1636084  0.05911043 0.17033792 0.10398644 0.01830613 0.15974981]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 17, 
+               max force gradient for inner bead 1.56e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.30e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.95e-03 (condition 5.00e-03) 
+               action 0.9315230850443915 
+beads optimization gradient: [0.00072965 0.00058493 0.00148262 0.00104676 0.0010443  0.0012769  0.00067825 0.0015648  0.0005331  0.00024252]
+beads potential relative to instanton path energy (eV): [0.00005567 0.01259434 0.0256624  0.0361561  0.04271526 0.04376262 0.03902735 0.02904962 0.01538352 0.00041414]
+distance between beads in mass scaled coordinate: [2.35336197 2.5187867  2.46616721 2.50339632 2.48004068 2.48641106 2.49310912 2.48862037 2.45030366]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 17
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 18 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16551932 0.17170075 0.16975264 0.16833168 0.16422156 0.06351977 0.17198624 0.10457438 0.02069521 0.10099474]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 18, 
+               max force gradient for inner bead 2.29e-03, (condition 5.00e-03), 
+               max force gradient for end bead 8.38e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.00e-02 (condition 5.00e-03) 
+               action 0.9285069930635564 
+beads optimization gradient: [0.00083783 0.0008639  0.00229262 0.00149327 0.00156726 0.00177036 0.00103061 0.00182362 0.00062698 0.00024876]
+beads potential relative to instanton path energy (eV): [-0.00002984  0.01250977  0.0255657   0.03607896  0.0426355   0.04369856  0.0389805   0.02899832  0.01536127  0.00040142]
+distance between beads in mass scaled coordinate: [2.35424066 2.52514594 2.46474773 2.5057841  2.47999249 2.48707259 2.49615063 2.48921434 2.4511556 ]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 18
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 19 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16489769 0.17233933 0.17161596 0.16950967 0.16561993 0.06814324 0.17388933 0.10517402 0.0240693  0.10071358]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 19, 
+               max force gradient for inner bead 1.13e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.58e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.93e-03 (condition 5.00e-03) 
+               action 0.9285579415217775 
+beads optimization gradient: [0.00075793 0.00068081 0.00027383 0.00093619 0.00090962 0.00113185 0.00049003 0.00075666 0.00047554 0.00024078]
+beads potential relative to instanton path energy (eV): [-0.00000427  0.01252645  0.0256009   0.03609253  0.04264995  0.04371479  0.03898925  0.02901464  0.01536549  0.0003989 ]
+distance between beads in mass scaled coordinate: [2.35247928 2.52324685 2.46497928 2.50478502 2.48010745 2.48689852 2.49548371 2.48868963 2.451784  ]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 19
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 20 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1649655  0.17221041 0.17080248 0.16936672 0.16531268 0.0669534  0.17354249 0.10498431 0.02335078 0.10077101]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 20, 
+               max force gradient for inner bead 1.96e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.91e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.90e-03 (condition 5.00e-03) 
+               action 0.9284020279200463 
+beads optimization gradient: [0.00079108 0.00065421 0.00196409 0.00103826 0.00105347 0.00118165 0.00067145 0.00152287 0.00044317 0.00024052]
+beads potential relative to instanton path energy (eV): [-0.00000061  0.01251873  0.0256093   0.03608255  0.04264042  0.04369856  0.0389849   0.02901571  0.01536306  0.0003871 ]
+distance between beads in mass scaled coordinate: [2.35032095 2.52323205 2.4652596  2.50432848 2.48044094 2.48704814 2.49562028 2.48855669 2.45359853]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 20
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 21 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16486776 0.17230198 0.1705935  0.16967506 0.16546046 0.16320151 0.17373542 0.10499573 0.02363609 0.10075303]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 21, 
+               max force gradient for inner bead 1.55e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.72e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.31e-03 (condition 5.00e-03) 
+               action 0.9284165406372553 
+beads optimization gradient: [0.00077165 0.00065505 0.00155397 0.00092444 0.00094828 0.00113876 0.00059329 0.00128787 0.00045125 0.00023943]
+beads potential relative to instanton path energy (eV): [-0.00000152  0.01251995  0.02560481  0.03608578  0.0426416   0.04369887  0.03898561  0.02901438  0.01536346  0.00038868]
+distance between beads in mass scaled coordinate: [2.35068714 2.52328687 2.46519333 2.50442728 2.48035103 2.48701658 2.49559902 2.48860913 2.45335879]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 21
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 22 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16488345 0.1722871  0.1707102  0.16957167 0.165451   0.16311524 0.17369734 0.10500029 0.02359462 0.10075532]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 22, 
+               max force gradient for inner bead 1.19e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.63e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.04e-03 (condition 5.00e-03) 
+               action 0.9283823707078284 
+beads optimization gradient: [0.00076251 0.00065301 0.00119406 0.00087831 0.00091191 0.00111698 0.00056804 0.00105563 0.0004533  0.0002379 ]
+beads potential relative to instanton path energy (eV): [-0.00000151  0.0125185   0.02560058  0.03608673  0.04263935  0.04369683  0.03898483  0.02901245  0.01536301  0.00038589]
+distance between beads in mass scaled coordinate: [2.35033878 2.52340568 2.46525613 2.50439601 2.48035999 2.48704224 2.49563301 2.48865467 2.45379209]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 22
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 23 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16486649 0.17230408 0.17082403 0.16953425 0.1655016  0.16313786 0.17372113 0.10501549 0.02365583 0.10075101]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 23, 
+               max force gradient for inner bead 1.05e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.58e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.82e-03 (condition 5.00e-03) 
+               action 0.9283526650408245 
+beads optimization gradient: [0.00075788 0.00065787 0.00085742 0.00088967 0.00086374 0.00104799 0.00050223 0.00070983 0.00045816 0.00023623]
+beads potential relative to instanton path energy (eV): [-0.0000015   0.01251626  0.02559515  0.03608682  0.04263608  0.04370602  0.03898361  0.02900988  0.0153623   0.00038168]
+distance between beads in mass scaled coordinate: [2.34981204 2.52357852 2.46540233 2.50433879 2.48037576 2.48708924 2.49567259 2.48873507 2.45444674]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 23
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 24 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16484122 0.17233055 0.17096655 0.16951779 0.16557362 0.06760643 0.1737604  0.10504097 0.02374907 0.10074454]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 24, 
+               max force gradient for inner bead 1.04e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.58e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.93e-03 (condition 5.00e-03) 
+               action 0.9282880252312112 
+beads optimization gradient: [0.00075789 0.00066756 0.00086952 0.00092094 0.00087022 0.00104193 0.0005046  0.00058441 0.00046452 0.00023479]
+beads potential relative to instanton path energy (eV): [-0.00000147  0.01251317  0.02558971  0.03608547  0.04263188  0.04370233  0.03898198  0.02900712  0.01536131  0.000376  ]
+distance between beads in mass scaled coordinate: [2.34910071 2.5237789  2.46561269 2.50426164 2.480397   2.48715645 2.49570868 2.48884649 2.45532471]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 24
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 25 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16480776 0.1723676  0.17110024 0.16954226 0.16566529 0.06788033 0.17381542 0.10507812 0.02387585 0.10073592]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 25, 
+               max force gradient for inner bead 1.04e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.57e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.02e-03 (condition 5.00e-03) 
+               action 0.9282077482531035 
+beads optimization gradient: [0.00075692 0.00067412 0.00081065 0.00093528 0.00086492 0.00103824 0.00051747 0.00066075 0.00046563 0.00023327]
+beads potential relative to instanton path energy (eV): [-0.00000144  0.01250925  0.02558536  0.03608265  0.0426268   0.04369774  0.03897993  0.02900474  0.01536003  0.00036898]
+distance between beads in mass scaled coordinate: [2.34821283 2.52397294 2.46584903 2.50416744 2.48042634 2.48724548 2.49573494 2.48896542 2.45640682]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 25
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 26 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16476697 0.17241555 0.17119276 0.16960981 0.16577497 0.06822549 0.17388737 0.10512369 0.02403531 0.10072535]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 26, 
+               max force gradient for inner bead 1.11e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.54e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.14e-03 (condition 5.00e-03) 
+               action 0.9280893397774886 
+beads optimization gradient: [0.0007538  0.00067502 0.00044737 0.00092554 0.00089144 0.00111389 0.00057036 0.00051811 0.00048756 0.00023126]
+beads potential relative to instanton path energy (eV): [-0.0000014   0.01250451  0.02558234  0.03607846  0.04262092  0.04367817  0.03897747  0.02900303  0.01535844  0.00036074]
+distance between beads in mass scaled coordinate: [2.34715864 2.52415259 2.46610101 2.50405509 2.48046534 2.48735278 2.49575122 2.48907188 2.45767254]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 26
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 27 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16471988 0.17247427 0.17124029 0.16971771 0.16590099 0.16343551 0.17397694 0.10517257 0.02422619 0.10071304]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 27, 
+               max force gradient for inner bead 1.08e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.53e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.98e-03 (condition 5.00e-03) 
+               action 0.9279643627170528 
+beads optimization gradient: [0.00075314 0.00067512 0.0006133  0.00091365 0.00083772 0.00108065 0.00054781 0.00024603 0.00046497 0.00022882]
+beads potential relative to instanton path energy (eV): [-0.00000135  0.01249833  0.02557968  0.03607224  0.04261345  0.04366987  0.03897416  0.02900178  0.01535643  0.00035025]
+distance between beads in mass scaled coordinate: [2.34579978 2.52436373 2.46637937 2.50397052 2.48047054 2.48753732 2.49575966 2.48916495 2.45929444]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 27
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 28 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16466115 0.17255184 0.17127222 0.16988025 0.16606123 0.16365679 0.17410027 0.10522709 0.02447892 0.10069752]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 28, 
+               max force gradient for inner bead 1.15e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.57e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.08e-03 (condition 5.00e-03) 
+               action 0.9278051501101003 
+beads optimization gradient: [0.00075675 0.00067934 0.00115357 0.00091697 0.00080155 0.00101418 0.00055298 0.0007694  0.00043807 0.00022674]
+beads potential relative to instanton path energy (eV): [-0.00000128  0.01249037  0.0255752   0.03606383  0.04260407  0.04365882  0.03896983  0.02900034  0.0153539   0.00033705]
+distance between beads in mass scaled coordinate: [2.34406399 2.52467423 2.4667384  2.50391338 2.48044446 2.48782247 2.49575673 2.48928747 2.46134718]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 28
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 29 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16458914 0.17265292 0.17135805 0.17010041 0.16626518 0.16400982 0.17426229 0.10528978 0.0248069  0.1006782 ]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 29, 
+               max force gradient for inner bead 1.32e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.58e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.03e-03 (condition 5.00e-03) 
+               action 0.9276061299225875 
+beads optimization gradient: [0.00075805 0.00068682 0.00132322 0.000893   0.00076406 0.00095605 0.00055932 0.00102922 0.00041452 0.00022469]
+beads potential relative to instanton path energy (eV): [-0.0000012   0.01248044  0.02556671  0.03605342  0.04259258  0.04364961  0.03896438  0.02899741  0.01535084  0.00032097]
+distance between beads in mass scaled coordinate: [2.3419118  2.52513658 2.46721654 2.50388002 2.48038494 2.48806339 2.49578659 2.48945654 2.46386031]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 29
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 30 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16450426 0.17278136 0.17156396 0.17037176 0.16652339 0.16422069 0.17446534 0.10536643 0.02521592 0.10065497]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 30, 
+               max force gradient for inner bead 1.25e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.55e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.98e-03 (condition 5.00e-03) 
+               action 0.9273590605742312 
+beads optimization gradient: [0.00075521 0.00070103 0.0012528  0.00084403 0.00075939 0.00106598 0.00059473 0.00087821 0.00040002 0.00022206]
+beads potential relative to instanton path energy (eV): [-0.0000011   0.01246815  0.02555289  0.03604091  0.04257872  0.04364251  0.03895756  0.02899209  0.01534719  0.00030167]
+distance between beads in mass scaled coordinate: [2.33927727 2.5257893  2.46783845 2.50387275 2.48028021 2.48826625 2.4958603  2.48969442 2.4668858 ]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 30
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 31 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16440689 0.1729452  0.17192132 0.17069908 0.16684564 0.16425412 0.17471863 0.10547399 0.02571689 0.10062752]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 31, 
+               max force gradient for inner bead 1.08e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.52e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.97e-03 (condition 5.00e-03) 
+               action 0.9270508220941207 
+beads optimization gradient: [0.00075151 0.00072744 0.001075   0.00080939 0.00075702 0.0010793  0.00062778 0.00059699 0.00039984 0.00021992]
+beads potential relative to instanton path energy (eV): [-0.00000097  0.01245277  0.02553392  0.03602561  0.04256192  0.04363062  0.03894892  0.02898435  0.01534278  0.00027861]
+distance between beads in mass scaled coordinate: [2.3360475  2.52665246 2.46870588 2.50377772 2.48027142 2.48851061 2.49598033 2.49001449 2.47051003]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 31
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 32 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16429761 0.17315992 0.17241019 0.17111289 0.16724357 0.16454319 0.17504873 0.10563888 0.026331   0.10059521]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 32, 
+               max force gradient for inner bead 1.08e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.46e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.90e-03 (condition 5.00e-03) 
+               action 0.9266618175035293 
+beads optimization gradient: [0.00074623 0.00075707 0.00053038 0.00078489 0.00074557 0.00108284 0.00064547 0.0002794  0.00039756 0.00021917]
+beads potential relative to instanton path energy (eV): [-0.00000082  0.01243309  0.02551251  0.0360063   0.04254132  0.04361196  0.03893763  0.02897608  0.01533731  0.00025114]
+distance between beads in mass scaled coordinate: [2.33205483 2.52769183 2.46978358 2.50360878 2.48036156 2.48886465 2.49604503 2.49042644 2.47483488]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 32
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 33 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16417884 0.17345101 0.17294204 0.17165581 0.16774459 0.16510558 0.17548643 0.10587211 0.02709375 0.1005573 ]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 33, 
+               max force gradient for inner bead 1.07e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.46e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.96e-03 (condition 5.00e-03) 
+               action 0.9261648259414437 
+beads optimization gradient: [0.00074555 0.00077844 0.00068073 0.00078476 0.00071718 0.00107472 0.00064196 0.00079393 0.00037276 0.00022134]
+beads potential relative to instanton path energy (eV): [-0.00000063  0.01240732  0.02549079  0.0359825   0.04251554  0.04358649  0.03892265  0.02896837  0.01533037  0.0002185 ]
+distance between beads in mass scaled coordinate: [2.32705569 2.52891286 2.47106312 2.50335162 2.48053936 2.48934581 2.496069   2.49087177 2.4799712 ]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 33
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 34 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16405696 0.17385543 0.17347905 0.17234732 0.16840269 0.16577125 0.17606346 0.10613807 0.02805718 0.10051286]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 34, 
+               max force gradient for inner bead 1.12e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.46e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.04e-03 (condition 5.00e-03) 
+               action 0.9255351294659778 
+beads optimization gradient: [0.00074644 0.00078715 0.00102372 0.00076614 0.00069075 0.0011162  0.00067213 0.00085395 0.00036112 0.00022693]
+beads potential relative to instanton path energy (eV): [-0.00000039  0.01237426  0.02546313  0.03595542  0.04248384  0.04355799  0.0389033   0.02895664  0.01532183  0.00018083]
+distance between beads in mass scaled coordinate: [2.32090028 2.53048598 2.47266383 2.50297132 2.48076321 2.48992061 2.49602404 2.49159451 2.48589031]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 34
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 35 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16394829 0.17440517 0.17422864 0.17316813 0.16925377 0.16629106 0.17679988 0.1064881  0.02924539 0.10046248]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 35, 
+               max force gradient for inner bead 1.12e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.47e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.94e-03 (condition 5.00e-03) 
+               action 0.9247362261163063 
+beads optimization gradient: [0.00074678 0.0008034  0.00111612 0.00070481 0.0006763  0.00108534 0.0006831  0.00044922 0.00038638 0.00023741]
+beads potential relative to instanton path energy (eV): [-0.00000012  0.01233279  0.02542549  0.03592107  0.04244618  0.04352753  0.03887889  0.02893923  0.01531134  0.00013858]
+distance between beads in mass scaled coordinate: [2.31344853 2.5325177  2.47459678 2.50272593 2.48104854 2.49039981 2.49609093 2.49253835 2.49250364]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 35
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 36 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16387878 0.17514349 0.17528533 0.1742634  0.17029532 0.16731296 0.17776131 0.10704609 0.03069045 0.10040722]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 36, 
+               max force gradient for inner bead 1.04e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.37e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.99e-03 (condition 5.00e-03) 
+               action 0.9238411554132678 
+beads optimization gradient: [0.00073694 0.0008193  0.00083834 0.00071135 0.00072141 0.0010369  0.00067704 0.00102571 0.00039027 0.00025725]
+beads potential relative to instanton path energy (eV): [0.00000021 0.0122805  0.0253775  0.0358777  0.04240055 0.04348832 0.03884736 0.02892237 0.01529797 0.00009226]
+distance between beads in mass scaled coordinate: [2.30439816 2.5350605  2.47705541 2.50245367 2.48146117 2.4910384  2.4960771  2.49362032 2.49969111]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 36
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 37 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16388953 0.1761495  0.17669933 0.17567982 0.1716325  0.16834914 0.17899389 0.10773663 0.03248834 0.10034791]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 37, 
+               max force gradient for inner bead 1.40e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.38e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.15e-03 (condition 5.00e-03) 
+               action 0.9225087600218534 
+beads optimization gradient: [0.00073772 0.00079589 0.00130306 0.00073363 0.00069713 0.00101464 0.00067574 0.00140448 0.00042924 0.00028929]
+beads potential relative to instanton path energy (eV): [0.00000059 0.01221446 0.02532027 0.03583098 0.04234405 0.04343567 0.03880744 0.02889478 0.01528104 0.00004329]
+distance between beads in mass scaled coordinate: [2.29340965 2.53822751 2.47991676 2.50208301 2.48203945 2.4918944  2.49610796 2.49528908 2.50716647]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 37
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 38 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16404569 0.17752526 0.17846779 0.17731698 0.17337606 0.1696903  0.18056257 0.10869279 0.0347253  0.1002873 ]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 38, 
+               max force gradient for inner bead 2.39e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.82e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.31e-03 (condition 5.00e-03) 
+               action 0.9189281325738157 
+beads optimization gradient: [0.00078183 0.00065652 0.00193928 0.00079333 0.00065759 0.00092375 0.00066257 0.00239134 0.00049344 0.00035768]
+beads potential relative to instanton path energy (eV): [ 0.00000103  0.01318241  0.02589455  0.03620597  0.04242988  0.04329249  0.03852394  0.02858746  0.01503567 -0.00000596]
+distance between beads in mass scaled coordinate: [2.47628652 2.47726915 2.47656174 2.47680538 2.47669527 2.47675081 2.47674686 2.47671062 2.47675758]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 38
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 39 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1644392  0.17347802 0.17686157 0.17653176 0.17354327 0.17045553 0.18166334 0.10937939 0.0368934  0.10023237]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 39, 
+               max force gradient for inner bead 2.70e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.77e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.55e-03 (condition 5.00e-03) 
+               action 0.9184524827050923 
+beads optimization gradient: [0.0007767  0.00069901 0.00192075 0.00092336 0.00095254 0.00111951 0.00090229 0.00269637 0.00052648 0.0003956 ]
+beads potential relative to instanton path energy (eV): [ 0.0000015   0.01308958  0.02579233  0.03614025  0.04235007  0.04326987  0.03846501  0.02854193  0.01500785 -0.00005259]
+distance between beads in mass scaled coordinate: [2.46082102 2.4820161  2.4810967  2.47627917 2.47769631 2.47818865 2.47755874 2.47881927 2.48328033]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 39
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 40 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16518791 0.1760192  0.18052009 0.17921275 0.17633796 0.09266805 0.18416933 0.11089277 0.04048237 0.10019709]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 40, 
+               max force gradient for inner bead 2.41e-03, (condition 5.00e-03), 
+               max force gradient for end bead 8.27e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.89e-03 (condition 5.00e-03) 
+               action 0.9176342446157968 
+beads optimization gradient: [0.00082651 0.00064751 0.00241415 0.00073896 0.00083771 0.00087132 0.00088637 0.00234749 0.0005614  0.00041859]
+beads potential relative to instanton path energy (eV): [ 0.00000201  0.01298047  0.02573826  0.03605161  0.04225114  0.04315057  0.03838864  0.02849318  0.01497163 -0.00009339]
+distance between beads in mass scaled coordinate: [2.44256767 2.48547482 2.48548547 2.47605607 2.47902913 2.47922339 2.47913795 2.4802405  2.48839448]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 40
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 41 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.166457   0.17925851 0.18255373 0.18287117 0.17998808 0.17530846 0.18750055 0.11353429 0.0448517  0.10021052]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 41, 
+               max force gradient for inner bead 2.56e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.66e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.18e-03 (condition 5.00e-03) 
+               action 0.9167117528134157 
+beads optimization gradient: [0.00076643 0.00065422 0.00220233 0.00066796 0.00126695 0.00109007 0.00128568 0.00256041 0.00070984 0.00047264]
+beads potential relative to instanton path energy (eV): [ 0.0000025   0.01285746  0.02560205  0.03595948  0.04212889  0.04306315  0.03830417  0.0284087   0.01492431 -0.00012437]
+distance between beads in mass scaled coordinate: [2.42087686 2.49069508 2.49137954 2.47628462 2.4811675  2.48056803 2.48182094 2.48276667 2.49121139]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 41
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 42 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.16853002 0.18323538 0.18775644 0.18698698 0.18477122 0.17856134 0.19119119 0.11708005 0.05033129 0.10032595]
+
+
+
+
+@Inner step summary: Outer loop # 1 , inner loop # 42, 
+               max force gradient for inner bead 2.67e-03, (condition 5.00e-03), 
+               max force gradient for end bead 8.54e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.17e-02 (condition 5.00e-03) 
+               action 0.9278575518704937 
+beads optimization gradient: [0.00085399 0.00109615 0.00267172 0.00134597 0.00139649 0.00167583 0.00164458 0.00177251 0.00093465 0.00068032]
+beads potential relative to instanton path energy (eV): [0.00000293 0.01271512 0.02543706 0.03584072 0.04206068 0.04293927 0.03820585 0.02835298 0.01485832 0.00131824]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 1, LI-NEB inner loop step 42
+
+
+
+
+
+
+@early stop info: outer loop: 1,  inner loop: 43 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.17170041 0.1882378  0.19499222 0.19230161 0.18774575 0.18347034 0.19567476 0.12045528 0.05744028 0.3178791 ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 1,  inner loop: 43 
+bead index that cause early stop (starting from 0) : [9]
+distance for beads out of trust region: [0.3178791]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 52
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 9
+Iter 0 - Loss: -3.025
+Iter 2 - Loss: -3.051
+@Outerloop Exit info: ab initio |f|: [0.01857194]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01629376]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.19502605]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.19502604647501476
+@Outerloop Exit info: |f_GPR -f| :[0.00362201]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01144115]
+@Outerloop Exit info: |f_GPR -f| :[0.00021248]
+Finish Outerloop: 2
+
+
+
+
+ @NEB Outerloop STEP 2, stage: neb
+Backup performed: inst.neb_instanton_2.ener -> #inst.neb_instanton_2.ener#0#
+Backup performed: inst.neb_instanton_2.xyz -> #inst.neb_instanton_2.xyz#0#
+
+
+@Inner step summary: Outer loop # 2 , inner loop # 0, 
+               max force gradient for inner bead 3.30e-03, (condition 5.00e-03), 
+               max force gradient for end bead 7.03e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.08e-02 (condition 5.00e-03) 
+               action 0.929908169043997 
+beads optimization gradient: [0.00070292 0.00104697 0.00175484 0.00131866 0.0012621  0.00162007 0.0016088  0.00329934 0.00043566 0.00050158]
+beads potential relative to instanton path energy (eV): [ 0.00099224  0.0135355   0.02595544  0.03606951  0.04211783  0.04295673  0.03829074  0.02845139  0.01496501 -0.00001592]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 2, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 2
+
+
+
+@early stop info: outer loop: 2,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.19672886 0.21453018 0.22172519 0.21866021 0.21361739 0.20893699 0.22355646 0.14046721 0.0639205  0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 2,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [1, 2, 3, 4, 5, 6]
+distance for beads out of trust region: [0.21453018 0.22172519 0.21866021 0.21361739 0.20893699 0.22355646]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 53
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 1
+Iter 0 - Loss: -1.721
+Iter 6 - Loss: -2.493
+@Outerloop Exit info: ab initio |f|: [0.0225859]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01485184]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.79013499]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.7901349868482548
+@Outerloop Exit info: |f_GPR -f| :[0.01784591]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01187985]
+@Outerloop Exit info: |f_GPR -f| :[0.00026832]
+Finish Outerloop: 3
+
+
+
+
+ @NEB Outerloop STEP 3, stage: neb
+
+
+@Inner step summary: Outer loop # 3 , inner loop # 0, 
+               max force gradient for inner bead 1.77e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.18e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.50e-02 (condition 5.00e-03) 
+               action 0.955619487561664 
+beads optimization gradient: [0.01184041 0.01769561 0.01533672 0.00968571 0.00483385 0.00258901 0.00185883 0.00339384 0.00034901 0.00052615]
+beads potential relative to instanton path energy (eV): [-0.000214    0.01632868  0.03149181  0.04125617  0.04545886  0.04438632  0.03854579  0.02851967  0.01501477 -0.00001614]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 3, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 3
+
+
+
+@early stop info: outer loop: 3,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.31846623 0.         0.35487775 0.35010733 0.34260302 0.33594958 0.36697472 0.20325122 0.09651332 0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 3,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [0, 2, 3, 4, 5, 6, 7]
+distance for beads out of trust region: [0.31846623 0.35487775 0.35010733 0.34260302 0.33594958 0.36697472 0.20325122]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 54
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 4
+Iter 0 - Loss: -2.418
+Iter 7 - Loss: -2.616
+@Outerloop Exit info: ab initio |f|: [0.0166139]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.00682758]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.6455223]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.6455223023856951
+@Outerloop Exit info: |f_GPR -f| :[0.01072464]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01039268]
+@Outerloop Exit info: |f_GPR -f| :[0.00017266]
+Finish Outerloop: 4
+
+
+
+
+ @NEB Outerloop STEP 4, stage: neb
+Backup performed: inst.neb_instanton_4.ener -> #inst.neb_instanton_4.ener#0#
+Backup performed: inst.neb_instanton_4.xyz -> #inst.neb_instanton_4.xyz#0#
+
+
+@Inner step summary: Outer loop # 4 , inner loop # 0, 
+               max force gradient for inner bead 1.91e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.15e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.02e-01 (condition 5.00e-03) 
+               action 0.9831797568350595 
+beads optimization gradient: [0.01145365 0.01914463 0.01810995 0.01481433 0.01173991 0.01064407 0.00995232 0.01007213 0.00735841 0.00122323]
+beads potential relative to instanton path energy (eV): [ 0.000001    0.01632805  0.03187695  0.04275228  0.04836869  0.04824588  0.04226385  0.03085819  0.01600797 -0.00001617]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 4, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 4
+
+
+
+@early stop info: outer loop: 4,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.2837687  0.         0.27449648 0.25191004 0.         0.25213021 0.29292915 0.18634249 0.13897869 0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 4,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [0, 2, 3, 5, 6]
+distance for beads out of trust region: [0.2837687  0.27449648 0.25191004 0.25213021 0.29292915]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 55
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 6
+Iter 0 - Loss: -2.585
+Iter 1 - Loss: -2.587
+@Outerloop Exit info: ab initio |f|: [0.01611167]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01467347]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.24409271]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.24409270846938977
+@Outerloop Exit info: |f_GPR -f| :[0.00393274]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01113947]
+@Outerloop Exit info: |f_GPR -f| :[0.00017948]
+Finish Outerloop: 5
+
+
+
+
+ @NEB Outerloop STEP 5, stage: neb
+
+
+@Inner step summary: Outer loop # 5 , inner loop # 0, 
+               max force gradient for inner bead 1.94e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.10e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.05e-01 (condition 5.00e-03) 
+               action 0.9877868677024291 
+beads optimization gradient: [0.01095159 0.01942664 0.01807862 0.01492149 0.01183987 0.01091764 0.01047138 0.01087107 0.00847428 0.00135146]
+beads potential relative to instanton path energy (eV): [ 0.00012415  0.01632797  0.03190293  0.04276579  0.04836933  0.0482721   0.04243604  0.03108596  0.01618967 -0.00001635]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 5, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 5
+
+
+
+@early stop info: outer loop: 5,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.30197525 0.         0.28095496 0.24409963 0.         0.24322665 0.         0.20190574 0.16091406 0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 5,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [0, 2, 3, 5, 7]
+distance for beads out of trust region: [0.30197525 0.28095496 0.24409963 0.24322665 0.20190574]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 56
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 0
+Iter 0 - Loss: -2.590
+Iter 1 - Loss: -2.589
+@Outerloop Exit info: ab initio |f|: [0.0217991]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.02031014]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.18358463]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.18358463461564137
+@Outerloop Exit info: |f_GPR -f| :[0.00400198]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01160687]
+@Outerloop Exit info: |f_GPR -f| :[0.00025302]
+Finish Outerloop: 6
+
+
+
+
+ @NEB Outerloop STEP 6, stage: neb
+Backup performed: inst.neb_instanton_6.ener -> #inst.neb_instanton_6.ener#0#
+Backup performed: inst.neb_instanton_6.xyz -> #inst.neb_instanton_6.xyz#0#
+
+
+@Inner step summary: Outer loop # 6 , inner loop # 0, 
+               max force gradient for inner bead 1.88e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.24e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.03e-01 (condition 5.00e-03) 
+               action 0.9836260347089013 
+beads optimization gradient: [0.01239803 0.01880831 0.01773181 0.01441436 0.01174618 0.01100758 0.01049835 0.0106469  0.00802892 0.00131162]
+beads potential relative to instanton path energy (eV): [-0.00027805  0.01632566  0.03179337  0.04267564  0.048372    0.04834849  0.04243238  0.03103141  0.01611712 -0.00001625]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 6, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 6
+
+
+
+@early stop info: outer loop: 6,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.         0.         0.25866917 0.23494154 0.         0.23503006 0.         0.18851632 0.13398448 0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 6,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [2, 3, 5]
+distance for beads out of trust region: [0.25866917 0.23494154 0.23503006]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 57
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 5
+Iter 0 - Loss: -2.651
+Iter 1 - Loss: -2.647
+@Outerloop Exit info: ab initio |f|: [0.01549347]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01539221]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01389504]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.013895035380267082
+@Outerloop Exit info: |f_GPR -f| :[0.00021528]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00795427]
+@Outerloop Exit info: |f_GPR -f| :[0.00012324]
+Finish Outerloop: 7
+
+
+
+
+ @NEB Outerloop STEP 7, stage: neb
+
+
+@Inner step summary: Outer loop # 7 , inner loop # 0, 
+               max force gradient for inner bead 1.88e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.24e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.04e-01 (condition 5.00e-03) 
+               action 0.9837261926746158 
+beads optimization gradient: [0.01239952 0.0188196  0.01774336 0.01442858 0.01176759 0.01102799 0.01053366 0.01070703 0.00813262 0.00132377]
+beads potential relative to instanton path energy (eV): [-0.00027812  0.01632559  0.03179074  0.04266999  0.04837439  0.04837144  0.04243388  0.03104418  0.01613553 -0.00001618]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 7, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 7
+
+
+
+@early stop info: outer loop: 7,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.         0.         0.26237051 0.22859625 0.         0.         0.         0.20306351 0.14751657 0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 7,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [2, 3, 7]
+distance for beads out of trust region: [0.26237051 0.22859625 0.20306351]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 58
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 7
+Iter 0 - Loss: -2.686
+Iter 1 - Loss: -2.679
+@Outerloop Exit info: ab initio |f|: [0.0171221]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01706096]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.04422949]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.04422949485915574
+@Outerloop Exit info: |f_GPR -f| :[0.0007573]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01222225]
+@Outerloop Exit info: |f_GPR -f| :[0.00020927]
+Finish Outerloop: 8
+
+
+
+
+ @NEB Outerloop STEP 8, stage: neb
+Backup performed: inst.neb_instanton_8.ener -> #inst.neb_instanton_8.ener#0#
+Backup performed: inst.neb_instanton_8.xyz -> #inst.neb_instanton_8.xyz#0#
+
+
+@Inner step summary: Outer loop # 8 , inner loop # 0, 
+               max force gradient for inner bead 1.88e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.24e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.04e-01 (condition 5.00e-03) 
+               action 0.9837873825534812 
+beads optimization gradient: [0.01238831 0.01880341 0.01772617 0.01441194 0.01176044 0.01103749 0.01057761 0.01076757 0.00821859 0.00133465]
+beads potential relative to instanton path energy (eV): [-0.00027816  0.01632583  0.0317861   0.04266446  0.04837345  0.04837292  0.04243402  0.03105882  0.01615413 -0.00001612]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 8, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 8
+
+
+
+@early stop info: outer loop: 8,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.         0.         0.23965539 0.21865094 0.         0.         0.         0.         0.12311345 0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 8,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [2, 3]
+distance for beads out of trust region: [0.23965539 0.21865094]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 59
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 2
+Iter 0 - Loss: -2.730
+Iter 3 - Loss: -2.734
+@Outerloop Exit info: ab initio |f|: [0.02177658]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.02181085]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00943505]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.009435054937610743
+@Outerloop Exit info: |f_GPR -f| :[0.00020546]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00642787]
+@Outerloop Exit info: |f_GPR -f| :[0.00013998]
+Finish Outerloop: 9
+
+
+
+
+ @NEB Outerloop STEP 9, stage: neb
+
+
+@Inner step summary: Outer loop # 9 , inner loop # 0, 
+               max force gradient for inner bead 1.88e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.24e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.04e-01 (condition 5.00e-03) 
+               action 0.9838428659462882 
+beads optimization gradient: [0.01238182 0.01881095 0.01773072 0.01441377 0.01175841 0.01103403 0.01057553 0.01077844 0.00823896 0.00133529]
+beads potential relative to instanton path energy (eV): [-0.00027948  0.01632991  0.03179623  0.04267046  0.048374    0.0483737   0.04243501  0.03105847  0.01615901 -0.00001612]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 9, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 9
+
+
+
+@early stop info: outer loop: 9,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.         0.         0.         0.21727704 0.         0.         0.         0.         0.13769723 0.        ]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 9,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [3]
+distance for beads out of trust region: [0.21727704]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 60
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 3
+Iter 0 - Loss: -2.779
+Iter 3 - Loss: -2.787
+@Outerloop Exit info: ab initio |f|: [0.01917595]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01922126]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00824551]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.008245508495838565
+@Outerloop Exit info: |f_GPR -f| :[0.00015812]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00618854]
+@Outerloop Exit info: |f_GPR -f| :[0.00011867]
+Finish Outerloop: 10
+
+
+
+
+ @NEB Outerloop STEP 10, stage: neb
+Backup performed: inst.neb_instanton_10.ener -> #inst.neb_instanton_10.ener#0#
+Backup performed: inst.neb_instanton_10.xyz -> #inst.neb_instanton_10.xyz#0#
+
+
+@Inner step summary: Outer loop # 10 , inner loop # 0, 
+               max force gradient for inner bead 1.88e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.24e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.04e-01 (condition 5.00e-03) 
+               action 0.9838335947572792 
+beads optimization gradient: [0.0123761  0.01880196 0.01772425 0.01440972 0.01175466 0.01102975 0.01057188 0.01077315 0.00823323 0.00133566]
+beads potential relative to instanton path energy (eV): [-0.0002794   0.01633008  0.03179537  0.04266899  0.04837312  0.04837347  0.04243529  0.03105836  0.01615741 -0.00001609]
+distance between beads in mass scaled coordinate: [2.39559898 2.49782465 2.49799622 2.47501754 2.48393539 2.48220542 2.48528336 2.48465316 2.49080764]
+
+
+@Finish Inner loop: outer loop step 10, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 10
+
+
+
+@early stop info: outer loop: 10,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.        0.        0.        0.        0.        0.        0.        0.        0.1314421 0.       ]
+
+
+
+
+@Inner step summary: Outer loop # 10 , inner loop # 1, 
+               max force gradient for inner bead 1.70e-02, (condition 5.00e-03), 
+               max force gradient for end bead 1.11e-02 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 9.57e-02 (condition 5.00e-03) 
+               action 0.9718206284734054 
+beads optimization gradient: [0.01108293 0.01695428 0.01621446 0.01359296 0.01125656 0.01050904 0.00968605 0.0098925  0.00715864 0.0012574 ]
+beads potential relative to instanton path energy (eV): [-0.00047964  0.01537022  0.030644    0.04179189  0.04775081  0.04777911  0.04194566  0.03071208  0.01596325 -0.00003109]
+distance between beads in mass scaled coordinate: [2.3505435  2.48475263 2.49297249 2.47570342 2.48271518 2.48080867 2.48127533 2.4829578  2.48758706]
+
+
+@Finish Inner loop: outer loop step 10, LI-NEB inner loop step 1
+
+
+
+
+
+
+@early stop info: outer loop: 10,  inner loop: 2 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.01340189 0.02640031 0.02754252 0.02186423 0.01579293 0.01802051 0.01648623 0.01593186 0.11800105 0.00390421]
+
+
+
+
+@Inner step summary: Outer loop # 10 , inner loop # 2, 
+               max force gradient for inner bead 1.42e-02, (condition 5.00e-03), 
+               max force gradient for end bead 9.44e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.38e-02 (condition 5.00e-03) 
+               action 0.9555238046445772 
+beads optimization gradient: [0.00944122 0.01423243 0.01394224 0.01228696 0.01040055 0.00981171 0.00857372 0.00873862 0.00564605 0.0012241 ]
+beads potential relative to instanton path energy (eV): [-0.00042043  0.01410047  0.02922022  0.04062291  0.04684272  0.04701972  0.04132367  0.03024378  0.0157429  -0.00002903]
+distance between beads in mass scaled coordinate: [2.25752549 2.46623135 2.48822721 2.47477366 2.48152923 2.4799318  2.47569679 2.48138528 2.48331364]
+
+
+@Finish Inner loop: outer loop step 10, LI-NEB inner loop step 2
+
+
+
+
+
+
+@early stop info: outer loop: 10,  inner loop: 3 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.02766923 0.06540882 0.06560195 0.05318753 0.04121732 0.04249816 0.03895048 0.03935847 0.10066815 0.00667791]
+
+
+
+
+@Inner step summary: Outer loop # 10 , inner loop # 3, 
+               max force gradient for inner bead 1.07e-02, (condition 5.00e-03), 
+               max force gradient for end bead 7.13e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.51e-02 (condition 5.00e-03) 
+               action 0.9345195518535718 
+beads optimization gradient: [0.00712826 0.00996197 0.01069212 0.01010277 0.00870834 0.00849517 0.00672001 0.00703149 0.00352303 0.00107088]
+beads potential relative to instanton path energy (eV): [-0.00029282  0.01454112  0.02915943  0.04007182  0.04596292  0.04587598  0.04014715  0.02924857  0.0152368  -0.00002507]
+distance between beads in mass scaled coordinate: [2.43515861 2.43692004 2.43622453 2.43603294 2.4363055  2.43601502 2.43628014 2.43615577 2.43619335]
+
+
+@Finish Inner loop: outer loop step 10, LI-NEB inner loop step 3
+
+
+
+
+
+
+@early stop info: outer loop: 10,  inner loop: 4 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.04819279 0.10708514 0.10677928 0.0902316  0.07380564 0.17475679 0.0693833  0.0717635  0.07766667 0.01087706]
+
+
+
+
+@Inner step summary: Outer loop # 10 , inner loop # 4, 
+               max force gradient for inner bead 7.44e-03, (condition 5.00e-03), 
+               max force gradient for end bead 4.44e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 4.30e-02 (condition 5.00e-03) 
+               action 0.9164642455118729 
+beads optimization gradient: [0.00444185 0.00460028 0.00695465 0.00743963 0.00659514 0.0069673  0.00445802 0.0048191  0.00162134 0.00079843]
+beads potential relative to instanton path energy (eV): [-0.00006655  0.0134275   0.0276946   0.03870868  0.04481944  0.04493049  0.03943302  0.02882084  0.01506606 -0.0000181 ]
+distance between beads in mass scaled coordinate: [2.31398395 2.40932249 2.43082751 2.43143784 2.43273937 2.43651155 2.42649384 2.43706362 2.43674808]
+
+
+@Finish Inner loop: outer loop step 10, LI-NEB inner loop step 4
+
+
+
+
+
+
+@early stop info: outer loop: 10,  inner loop: 5 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.0735848  0.16802922 0.16999497 0.14588883 0.12101189 0.12936333 0.10916657 0.11261819 0.05140466 0.01642443]
+
+
+
+
+@Inner step summary: Outer loop # 10 , inner loop # 5, 
+               max force gradient for inner bead 5.60e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.30e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 2.91e-02 (condition 5.00e-03) 
+               action 0.9087782325408355 
+beads optimization gradient: [0.00230259 0.00254249 0.00353327 0.00436044 0.00372754 0.00500364 0.00382649 0.00559738 0.00119509 0.00109674]
+beads potential relative to instanton path energy (eV): [ 0.00027395  0.01287628  0.02680074  0.03774945  0.04392735  0.04420159  0.03891654  0.02864586  0.01499056 -0.00000701]
+distance between beads in mass scaled coordinate: [2.19892261 2.38446043 2.42500481 2.42512183 2.42771362 2.43998525 2.41496321 2.44206702 2.43997112]
+
+
+@Finish Inner loop: outer loop step 10, LI-NEB inner loop step 5
+
+
+
+
+
+
+@early stop info: outer loop: 10,  inner loop: 6 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.10193793 0.19395956 0.19636025 0.2028075  0.17728909 0.17513646 0.1539969  0.15052263 0.02586423 0.02308929]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 10,  inner loop: 6 
+bead index that cause early stop (starting from 0) : [3]
+distance for beads out of trust region: [0.2028075]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 66
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 3
+Iter 0 - Loss: -2.736
+Iter 1 - Loss: -2.739
+@Outerloop Exit info: ab initio |f|: [0.0096252]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01044806]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.24878611]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.2487861074901712
+@Outerloop Exit info: |f_GPR -f| :[0.00239462]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.02586484]
+@Outerloop Exit info: |f_GPR -f| :[0.00024895]
+Finish Outerloop: 11
+
+
+
+
+ @NEB Outerloop STEP 11, stage: neb
+
+
+@Inner step summary: Outer loop # 11 , inner loop # 0, 
+               max force gradient for inner bead 5.59e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.86e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 2.76e-02 (condition 5.00e-03) 
+               action 0.9119541439677327 
+beads optimization gradient: [0.00186172 0.00245474 0.00302871 0.00370976 0.00347803 0.00490349 0.00378808 0.00559299 0.00122241 0.0010941 ]
+beads potential relative to instanton path energy (eV): [ 0.00043533  0.01324537  0.02704416  0.03789727  0.04400129  0.04423181  0.03890825  0.02864488  0.01499274 -0.00000706]
+distance between beads in mass scaled coordinate: [2.19892261 2.38446043 2.42500481 2.42512183 2.42771362 2.43998525 2.41496321 2.44206702 2.43997112]
+
+
+@Finish Inner loop: outer loop step 11, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 11
+
+
+
+@early stop info: outer loop: 11,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.11579387 0.21315867 0.21617315 0.         0.2022541  0.19982029 0.17570602 0.16814257 0.02938519 0.02634951]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 11,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [1, 2, 4]
+distance for beads out of trust region: [0.21315867 0.21617315 0.2022541 ]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 67
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 1
+Iter 0 - Loss: -2.716
+Iter 1 - Loss: -2.719
+@Outerloop Exit info: ab initio |f|: [0.015831]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01586061]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.16706832]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.1670683163167915
+@Outerloop Exit info: |f_GPR -f| :[0.00264486]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01690868]
+@Outerloop Exit info: |f_GPR -f| :[0.00026768]
+Finish Outerloop: 12
+
+
+
+
+ @NEB Outerloop STEP 12, stage: neb
+Backup performed: inst.neb_instanton_12.ener -> #inst.neb_instanton_12.ener#0#
+Backup performed: inst.neb_instanton_12.xyz -> #inst.neb_instanton_12.xyz#0#
+
+
+@Inner step summary: Outer loop # 12 , inner loop # 0, 
+               max force gradient for inner bead 5.59e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.01e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 2.87e-02 (condition 5.00e-03) 
+               action 0.9131752426085747 
+beads optimization gradient: [0.00201109 0.00308751 0.00330479 0.00367459 0.0034555  0.00489158 0.00378574 0.00559399 0.00119641 0.00110053]
+beads potential relative to instanton path energy (eV): [ 0.00053474  0.01340273  0.02709116  0.03790284  0.04400188  0.04423773  0.03891445  0.02864698  0.01499159 -0.00000749]
+distance between beads in mass scaled coordinate: [2.19892261 2.38446043 2.42500481 2.42512183 2.42771362 2.43998525 2.41496321 2.44206702 2.43997112]
+
+
+@Finish Inner loop: outer loop step 12, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 12
+
+
+
+@early stop info: outer loop: 12,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1095931  0.         0.20130991 0.         0.18841498 0.18606117 0.16361235 0.14760512 0.02715402 0.02470212]
+
+
+
+
+@Early Stop for Inner Loop. outer loop: 12,  inner loop: 1 
+bead index that cause early stop (starting from 0) : [2]
+distance for beads out of trust region: [0.20130991]
+distance cutoff: 0.2
+
+
+optimization step so far for neb stage: 68
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: 2
+Iter 0 - Loss: -2.769
+Iter 3 - Loss: -2.768
+@Outerloop Exit info: ab initio |f|: [0.01309687]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01309719]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.02834528]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.02834527777238975
+@Outerloop Exit info: |f_GPR -f| :[0.00037123]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.01589056]
+@Outerloop Exit info: |f_GPR -f| :[0.00020812]
+Finish Outerloop: 13
+
+
+
+
+ @NEB Outerloop STEP 13, stage: neb
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 0, 
+               max force gradient for inner bead 5.60e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.99e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 2.85e-02 (condition 5.00e-03) 
+               action 0.9131444702857766 
+beads optimization gradient: [0.00199105 0.00302498 0.00324599 0.00364303 0.00345362 0.00490372 0.00379702 0.00559973 0.00118888 0.00109361]
+beads potential relative to instanton path energy (eV): [ 0.00052987  0.01340462  0.02709709  0.03789989  0.04399551  0.04423384  0.03891728  0.02864645  0.01499205 -0.00000694]
+distance between beads in mass scaled coordinate: [2.19892261 2.38446043 2.42500481 2.42512183 2.42771362 2.43998525 2.41496321 2.44206702 2.43997112]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 13
+
+
+
+@early stop info: outer loop: 13,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1042296  0.         0.         0.         0.17800799 0.17575569 0.1545162  0.14379168 0.02566839 0.02329574]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 1, 
+               max force gradient for inner bead 6.03e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.80e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 2.83e-02 (condition 5.00e-03) 
+               action 0.9118749083948731 
+beads optimization gradient: [0.00279874 0.00603043 0.00464123 0.00343039 0.00337469 0.00400023 0.00271821 0.00337006 0.00101156 0.00081093]
+beads potential relative to instanton path energy (eV): [0.00109509 0.01542559 0.02874246 0.03866454 0.04394611 0.04380784 0.038243   0.0280683  0.01464782 0.00001115]
+distance between beads in mass scaled coordinate: [2.37878305 2.38675245 2.38160213 2.38203154 2.38286786 2.38277793 2.38288613 2.38248671 2.38279912]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 1
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 2 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.13427477 0.0441011  0.05959691 0.05845655 0.18788091 0.18257112 0.17715211 0.14680086 0.01030578 0.03262039]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 2, 
+               max force gradient for inner bead 4.82e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.40e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 2.37e-02 (condition 5.00e-03) 
+               action 0.9111032891242163 
+beads optimization gradient: [0.00240273 0.00481731 0.00375582 0.00271182 0.00261176 0.00354378 0.00241698 0.00368173 0.00064305 0.00082441]
+beads potential relative to instanton path energy (eV): [0.00092672 0.01532977 0.02866217 0.03864801 0.04397541 0.04379944 0.03826022 0.02806862 0.01463506 0.00000543]
+distance between beads in mass scaled coordinate: [2.40511968 2.39040353 2.38264803 2.38325962 2.38427078 2.37992715 2.38288212 2.38487241 2.38157084]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 2
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 3 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.12741711 0.03426479 0.04356707 0.04268825 0.19238581 0.18682793 0.17790492 0.14563219 0.01208817 0.03051257]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 3, 
+               max force gradient for inner bead 4.44e-03, (condition 5.00e-03), 
+               max force gradient for end bead 2.18e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.96e-02 (condition 5.00e-03) 
+               action 0.9107378945052529 
+beads optimization gradient: [0.00218157 0.00443813 0.00344926 0.00229868 0.00197388 0.00268843 0.00162477 0.00311196 0.00055569 0.00075301]
+beads potential relative to instanton path energy (eV): [0.00091605 0.01531657 0.02865305 0.03864755 0.04396973 0.0438024  0.0382571  0.02806749 0.01463544 0.00000532]
+distance between beads in mass scaled coordinate: [2.40016297 2.38968303 2.38253885 2.38204766 2.38443396 2.37981395 2.38251774 2.38467771 2.38095543]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 3
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 4 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.12864154 0.0326275  0.04178764 0.04290902 0.19175891 0.18745363 0.17777722 0.1454276  0.01234556 0.03096952]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 4, 
+               max force gradient for inner bead 3.89e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.88e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.43e-02 (condition 5.00e-03) 
+               action 0.9103088850766954 
+beads optimization gradient: [0.00188136 0.00388612 0.00297947 0.00157925 0.00125922 0.00171482 0.00074461 0.00127961 0.00044339 0.00067287]
+beads potential relative to instanton path energy (eV): [0.00090119 0.01529948 0.02864128 0.03864716 0.04396313 0.04380746 0.03825348 0.02806662 0.014636   0.00000524]
+distance between beads in mass scaled coordinate: [2.39346598 2.38879479 2.38253311 2.3806268  2.38479248 2.37986334 2.38222582 2.38448751 2.3800794 ]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 4
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 5 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.13039577 0.03049863 0.03939707 0.04380228 0.19095542 0.18831403 0.17762914 0.14513001 0.01269849 0.03164274]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 5, 
+               max force gradient for inner bead 3.22e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.55e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.29e-02 (condition 5.00e-03) 
+               action 0.9098799628035019 
+beads optimization gradient: [0.00154875 0.00322296 0.00260906 0.0013958  0.0014102  0.00150787 0.00089209 0.00229717 0.00039292 0.00068698]
+beads potential relative to instanton path energy (eV): [0.00088189 0.01528077 0.02862848 0.03864651 0.04395688 0.04381259 0.03825031 0.02806619 0.01463663 0.00000522]
+distance between beads in mass scaled coordinate: [2.38572966 2.38784374 2.38274684 2.37926975 2.38537606 2.38008263 2.38217054 2.38440571 2.37896536]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 5
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 6 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.13264067 0.02816384 0.03664806 0.04516303 0.19007372 0.18892335 0.17749776 0.14491314 0.01314723 0.03252271]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 6, 
+               max force gradient for inner bead 2.56e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.25e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.17e-02 (condition 5.00e-03) 
+               action 0.909472691069867 
+beads optimization gradient: [0.00124727 0.0025567  0.00224776 0.0011199  0.00151561 0.00143465 0.00115709 0.00245694 0.00030666 0.00069124]
+beads potential relative to instanton path energy (eV): [0.00085877 0.01526368 0.02861649 0.03864579 0.04395137 0.04381575 0.03824771 0.02806531 0.01463727 0.0000053 ]
+distance between beads in mass scaled coordinate: [2.37807533 2.38696872 2.38316626 2.37805708 2.38598266 2.38037727 2.38227914 2.3843133  2.37763235]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 6
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 7 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1352238  0.02612007 0.03400073 0.04571196 0.18908654 0.18920048 0.17739907 0.14488629 0.01368036 0.03360702]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 7, 
+               max force gradient for inner bead 2.49e-03, (condition 5.00e-03), 
+               max force gradient for end bead 1.00e-03 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 1.02e-02 (condition 5.00e-03) 
+               action 0.9090993926559479 
+beads optimization gradient: [0.00100072 0.00191955 0.0018498  0.00078886 0.00145683 0.00144004 0.00141935 0.00248687 0.0001977  0.00065128]
+beads potential relative to instanton path energy (eV): [0.00083228 0.01525055 0.02860635 0.03864511 0.0439472  0.04381684 0.03824682 0.02806383 0.01463786 0.00000552]
+distance between beads in mass scaled coordinate: [2.37142907 2.38624765 2.38371763 2.37704395 2.38650807 2.38059638 2.38236788 2.38416484 2.37612097]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 7
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 8 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.13800776 0.02482593 0.0319168  0.04563457 0.18798088 0.18917969 0.17741379 0.14501688 0.01426473 0.0348898 ]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 8, 
+               max force gradient for inner bead 2.10e-03, (condition 5.00e-03), 
+               max force gradient for end bead 8.02e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.21e-03 (condition 5.00e-03) 
+               action 0.9087445727617723 
+beads optimization gradient: [0.00080165 0.00128255 0.00149495 0.00062206 0.00142535 0.00134826 0.00128894 0.00210098 0.00015325 0.0005711 ]
+beads potential relative to instanton path energy (eV): [0.00079943 0.01524201 0.02859727 0.03864453 0.04394506 0.04381593 0.03824754 0.02806206 0.01463845 0.00000597]
+distance between beads in mass scaled coordinate: [2.3659857  2.38568598 2.38441042 2.37621914 2.38697846 2.38060848 2.3824032  2.38394919 2.37433148]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 8
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 9 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14119662 0.02456951 0.0305965  0.0451473  0.18667142 0.18883769 0.17750419 0.14532977 0.01490365 0.03650667]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 9, 
+               max force gradient for inner bead 2.07e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.72e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 8.07e-03 (condition 5.00e-03) 
+               action 0.9084407428657059 
+beads optimization gradient: [0.00067151 0.00084229 0.00122465 0.00079345 0.0015579  0.00143413 0.00129864 0.00206909 0.00025652 0.00051788]
+beads potential relative to instanton path energy (eV): [0.00075896 0.01523953 0.028589   0.03864409 0.04394607 0.0438133  0.03824957 0.02806189 0.01463896 0.00000679]
+distance between beads in mass scaled coordinate: [2.3627341  2.38540038 2.3851935  2.37556552 2.38745036 2.38032419 2.38243986 2.38377948 2.37231842]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 9
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 10 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14476971 0.02557733 0.03030039 0.04463611 0.1854197  0.18813494 0.17756018 0.1457734  0.01550671 0.03847814]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 10, 
+               max force gradient for inner bead 1.63e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.90e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 7.39e-03 (condition 5.00e-03) 
+               action 0.9084901378000355 
+beads optimization gradient: [0.00068962 0.00088737 0.00116968 0.00068444 0.00145434 0.00131772 0.00118081 0.00162638 0.00021344 0.00051723]
+beads potential relative to instanton path energy (eV): [0.0007675  0.01523907 0.028591   0.03864417 0.04394588 0.04381369 0.03824904 0.02806203 0.01463878 0.00000652]
+distance between beads in mass scaled coordinate: [2.36349979 2.38545018 2.38497981 2.37570376 2.38732641 2.38033652 2.38240927 2.38379422 2.37277138]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 10
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 11 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14392968 0.02520533 0.03043522 0.04479611 0.18575826 0.18825464 0.17753264 0.14561929 0.01534033 0.03803495]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 11, 
+               max force gradient for inner bead 1.37e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.83e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.93e-03 (condition 5.00e-03) 
+               action 0.9084672100833143 
+beads optimization gradient: [0.00068327 0.00086786 0.00103482 0.00062725 0.00137278 0.00122738 0.00110515 0.00135624 0.00020619 0.00051155]
+beads potential relative to instanton path energy (eV): [0.00076475 0.01523852 0.02859098 0.03864414 0.04394621 0.0438133  0.03824903 0.02806245 0.0146387  0.00000649]
+distance between beads in mass scaled coordinate: [2.36371182 2.38546384 2.38496767 2.3756868  2.38732728 2.3802438  2.38239509 2.38377689 2.3726868 ]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 11
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 12 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14404395 0.02519968 0.03059055 0.04485042 0.18580821 0.1881522  0.17750658 0.14555765 0.01531626 0.0381352 ]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 12, 
+               max force gradient for inner bead 1.26e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.76e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 6.36e-03 (condition 5.00e-03) 
+               action 0.908434459165034 
+beads optimization gradient: [0.00067605 0.00084451 0.00086153 0.00055667 0.00126084 0.0011036  0.00100889 0.00105482 0.00019955 0.00050607]
+beads potential relative to instanton path energy (eV): [0.00076058 0.01523772 0.02859092 0.03864412 0.04394675 0.04381275 0.03824908 0.02806309 0.01463859 0.00000646]
+distance between beads in mass scaled coordinate: [2.36403246 2.38549022 2.3849497  2.37566266 2.38733088 2.38011709 2.38237517 2.38375593 2.37255981]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 12
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 13 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.1442174  0.02519378 0.03082396 0.04492381 0.18587179 0.18800486 0.17746941 0.14548474 0.01528297 0.03828633]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 13, 
+               max force gradient for inner bead 1.13e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.70e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.85e-03 (condition 5.00e-03) 
+               action 0.9083930353653202 
+beads optimization gradient: [0.00067035 0.00082307 0.0007981  0.00049121 0.00113204 0.00096069 0.0008973  0.00103885 0.00019652 0.00050227]
+beads potential relative to instanton path energy (eV): [0.00075495 0.01523666 0.02859078 0.0386441  0.04394752 0.04381209 0.03824923 0.02806383 0.01463845 0.00000642]
+distance between beads in mass scaled coordinate: [2.36447059 2.38553207 2.38492647 2.37563324 2.38733988 2.37996595 2.38235208 2.38373544 2.37238985]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 13
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 14 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14445152 0.02518754 0.0311161  0.04501317 0.18593736 0.18781773 0.17742338 0.14541947 0.01524135 0.03848957]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 14, 
+               max force gradient for inner bead 1.19e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.67e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.50e-03 (condition 5.00e-03) 
+               action 0.9083440878416666 
+beads optimization gradient: [0.00066678 0.00080602 0.00091223 0.00046339 0.00102389 0.00083469 0.00075536 0.00118676 0.00019861 0.00049887]
+beads potential relative to instanton path energy (eV): [0.00074788 0.01523537 0.02859055 0.03864409 0.04394856 0.04381139 0.03824954 0.02806453 0.0146383  0.00000638]
+distance between beads in mass scaled coordinate: [2.36503126 2.38558991 2.38489792 2.37560025 2.38735613 2.37980214 2.38232745 2.38371806 2.37217751]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 14
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 15 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14474623 0.02518089 0.03142662 0.04511434 0.18597946 0.18759902 0.17737244 0.14538258 0.01519261 0.03874478]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 15, 
+               max force gradient for inner bead 1.22e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.64e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.35e-03 (condition 5.00e-03) 
+               action 0.9082886643817766 
+beads optimization gradient: [0.00066351 0.00079085 0.00104045 0.00049877 0.00098828 0.00077382 0.00059616 0.00121855 0.00020523 0.00049368]
+beads potential relative to instanton path energy (eV): [0.00073945 0.01523384 0.02859023 0.03864411 0.04394974 0.04381073 0.03825006 0.02806504 0.01463813 0.00000634]
+distance between beads in mass scaled coordinate: [2.36571004 2.38566133 2.38486287 2.37556527 2.38737922 2.37963667 2.38230164 2.38370423 2.37192619]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 15
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 16 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14509788 0.0251739  0.03170881 0.04522359 0.18595537 0.18735836 0.17732284 0.14538475 0.01513806 0.03904836]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 16, 
+               max force gradient for inner bead 1.10e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.58e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.32e-03 (condition 5.00e-03) 
+               action 0.9082204027876108 
+beads optimization gradient: [0.00065802 0.00077271 0.00110452 0.00055586 0.00098162 0.00075949 0.00060521 0.00106366 0.00021606 0.00048527]
+beads potential relative to instanton path energy (eV): [0.00072874 0.01523191 0.02858976 0.03864415 0.04395092 0.04381009 0.03825084 0.02806538 0.01463793 0.00000629]
+distance between beads in mass scaled coordinate: [2.36658854 2.38575323 2.38481379 2.37552603 2.38740818 2.37945847 2.38227263 2.3836929  2.37160817]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 16
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 17 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14554747 0.02516624 0.03195399 0.04535383 0.18584653 0.18707246 0.17727918 0.14543203 0.0150718  0.03943459]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 17, 
+               max force gradient for inner bead 1.07e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.49e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.26e-03 (condition 5.00e-03) 
+               action 0.9081368256150417 
+beads optimization gradient: [0.00064885 0.00074955 0.00107231 0.0005952  0.00096833 0.00075515 0.00063276 0.0006997  0.0002297  0.00047449]
+beads potential relative to instanton path energy (eV): [0.00071535 0.01522948 0.02858914 0.03864424 0.0439519  0.04380956 0.0382517  0.0280656  0.01463769 0.00000625]
+distance between beads in mass scaled coordinate: [2.36770576 2.38586948 2.38474423 2.3754812  2.38743639 2.37926904 2.38224325 2.38368539 2.3712136 ]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 17
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 18 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14611278 0.02515893 0.03213557 0.0455134  0.18565317 0.18673306 0.17724978 0.14552669 0.01499092 0.0399167 ]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 18, 
+               max force gradient for inner bead 9.32e-04, (condition 5.00e-03), 
+               max force gradient for end bead 6.36e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.13e-03 (condition 5.00e-03) 
+               action 0.9080346634809832 
+beads optimization gradient: [0.00063608 0.00072187 0.00091306 0.00060243 0.00093216 0.0007328  0.00062518 0.00060406 0.00024353 0.0004633 ]
+beads potential relative to instanton path energy (eV): [0.00069875 0.01522645 0.02858835 0.0386444  0.04395259 0.04380927 0.0382525  0.02806586 0.0146374  0.00000623]
+distance between beads in mass scaled coordinate: [2.36912011 2.38601848 2.38464749 2.37542934 2.38745547 2.37906481 2.38221411 2.3836823  2.37072819]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 18
+
+
+
+
+
+
+@early stop info: outer loop: 13,  inner loop: 19 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.14681965 0.02515434 0.03225105 0.04571673 0.18537139 0.18632701 0.17723676 0.14565497 0.01488965 0.04051403]
+
+
+
+
+@Inner step summary: Outer loop # 13 , inner loop # 19, 
+               max force gradient for inner bead 8.64e-04, (condition 5.00e-03), 
+               max force gradient for end bead 6.22e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 4.92e-03 (condition 5.00e-03) 
+               action 0.9079105569285216 
+beads optimization gradient: [0.00062226 0.00069419 0.00069994 0.00058037 0.00086446 0.00067596 0.00059712 0.00078602 0.00025108 0.00045048]
+beads potential relative to instanton path energy (eV): [0.00067825 0.01522266 0.02858735 0.03864461 0.043953   0.04380939 0.03825323 0.02806632 0.01463703 0.00000623]
+distance between beads in mass scaled coordinate: [2.37090512 2.38621226 2.38452001 2.37537172 2.38745851 2.37883935 2.38218195 2.38367939 2.37013499]
+
+
+@Finish Inner loop: outer loop step 13, LI-NEB inner loop step 19
+
+
+
+
+@LI-NEB/String converge on GPR PES
+optimization step so far for neb stage: 88
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: []
+Iter 0 - Loss: -2.751
+Iter 2 - Loss: -2.788
+@Outerloop Exit info: ab initio |f|: [0.01740492 0.01561673 0.0126617  0.00873953 0.00516017 0.0055988  0.00945617 0.01337775 0.01638447 0.01818657]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01731785 0.01550439 0.01251204 0.00859504 0.00494687 0.00532443 0.00912284 0.01308535 0.01611971 0.01818308]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.02235457 0.06747772 0.1024704  0.09281511 0.12945698 0.1999833  0.17044726 0.12041703 0.09273841 0.05450507]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.1999832993083731
+@Outerloop Exit info: |f_GPR -f| :[0.00038908 0.00105378 0.00129745 0.00081116 0.00066802 0.00111967 0.00161178 0.00161091 0.00151947 0.00099126]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00800469 0.06204785 0.07832742 0.05522787 0.04667106 0.06421426 0.04405053 0.03342767 0.04144863 0.04549285]
+@Outerloop Exit info: |f_GPR -f| :[0.00013932 0.00096898 0.00099176 0.00048267 0.00024083 0.00035952 0.00041655 0.00044719 0.00067911 0.00082736]
+Finish Outerloop: 14
+
+
+
+
+absolute force error cutoff: 0.001
+relative force error cutoff: 0.05
+ @NEB Outerloop STEP 14, stage: neb
+
+
+@Inner step summary: Outer loop # 14 , inner loop # 0, 
+               max force gradient for inner bead 2.28e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.32e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.83e-03 (condition 5.00e-03) 
+               action 0.9083562591340558 
+beads optimization gradient: [0.000632   0.00067489 0.00053157 0.00053626 0.00085357 0.00083915 0.00090723 0.00228343 0.00029874 0.00044558]
+beads potential relative to instanton path energy (eV): [0.00065006 0.01521938 0.02859428 0.03864742 0.04396056 0.04383003 0.03830355 0.02811504 0.01467132 0.00001178]
+distance between beads in mass scaled coordinate: [2.37090512 2.38621226 2.38452001 2.37537172 2.38745851 2.37883935 2.38218195 2.38367939 2.37013499]
+
+
+@Finish Inner loop: outer loop step 14, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 14
+
+
+
+@early stop info: outer loop: 14,  inner loop: 1 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.         0.02882814 0.03644113 0.04978372 0.         0.         0.         0.         0.01658423 0.04272712]
+
+
+
+
+@Inner step summary: Outer loop # 14 , inner loop # 1, 
+               max force gradient for inner bead 2.14e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.18e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 5.39e-03 (condition 5.00e-03) 
+               action 0.908215583807888 
+beads optimization gradient: [0.0006185  0.00062924 0.0004872  0.00048822 0.00075027 0.00077391 0.00083345 0.00214048 0.00031422 0.00042014]
+beads potential relative to instanton path energy (eV): [0.00062598 0.01521503 0.0285941  0.03864824 0.0439609  0.04383049 0.03830435 0.02811576 0.01467132 0.00001202]
+distance between beads in mass scaled coordinate: [2.37299161 2.38640262 2.38439385 2.37531634 2.38744642 2.37857891 2.38210555 2.38363348 2.36944407]
+
+
+@Finish Inner loop: outer loop step 14, LI-NEB inner loop step 1
+
+
+
+
+
+
+@early stop info: outer loop: 14,  inner loop: 2 
+internal coordinate distance cutoff: 0.2
+distance for beads to nearest GPR point: [0.00132246 0.02887849 0.03645909 0.05010703 0.00126519 0.0016784  0.00089505 0.00052207 0.0164277  0.04362238]
+
+
+
+
+@Inner step summary: Outer loop # 14 , inner loop # 2, 
+               max force gradient for inner bead 1.32e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.06e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 4.87e-03 (condition 5.00e-03) 
+               action 0.9080477115771496 
+beads optimization gradient: [0.00060551 0.00057504 0.00073124 0.00044672 0.00064445 0.00072042 0.00073437 0.00131902 0.00033614 0.0003864 ]
+beads potential relative to instanton path energy (eV): [0.00059789 0.01520996 0.02859394 0.03864919 0.04396132 0.04383169 0.03830514 0.02811655 0.01467143 0.00001228]
+distance between beads in mass scaled coordinate: [2.37545826 2.3866034  2.38426672 2.37526776 2.3874192  2.37827843 2.38199591 2.38357375 2.36864084]
+
+
+@Finish Inner loop: outer loop step 14, LI-NEB inner loop step 2
+
+
+
+
+@LI-NEB/String converge on GPR PES
+optimization step so far for neb stage: 91
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: []
+@Outerloop Exit info: ab initio |f|: [0.01740213 0.0156374  0.01268657 0.00875815 0.00515227 0.00557022 0.00944168 0.013359   0.01638178 0.01817847]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01738013 0.01556032 0.01253923 0.00862828 0.00504815 0.00550085 0.00937441 0.0133116  0.01626138 0.01825643]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00712503 0.07040467 0.08347901 0.0647137  0.04972604 0.06466277 0.04395593 0.03130777 0.04134278 0.04773796]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.08347901260162681
+@Outerloop Exit info: |f_GPR -f| :[0.00012399 0.00110095 0.00105906 0.00056677 0.0002562  0.00036019 0.00041502 0.00041824 0.00067727 0.0008678 ]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00712503 0.07040467 0.08347901 0.0647137  0.04972604 0.06466277 0.04395593 0.03130777 0.04134278 0.04773796]
+@Outerloop Exit info: |f_GPR -f| :[0.00012399 0.00110095 0.00105906 0.00056677 0.0002562  0.00036019 0.00041502 0.00041824 0.00067727 0.0008678 ]
+Finish Outerloop: 15
+
+
+
+
+absolute force error cutoff: 0.001
+relative force error cutoff: 0.05
+ @NEB Outerloop STEP 15, stage: neb
+
+
+@Inner step summary: Outer loop # 15 , inner loop # 0, 
+               max force gradient for inner bead 1.32e-03, (condition 5.00e-03), 
+               max force gradient for end bead 6.06e-04 (condition 5.00e-03) 
+              sum of gradient of action for internal beads 4.87e-03 (condition 5.00e-03) 
+               action 0.9080477115771496 
+beads optimization gradient: [0.00060551 0.00057504 0.00073124 0.00044672 0.00064445 0.00072042 0.00073437 0.00131902 0.00033614 0.0003864 ]
+beads potential relative to instanton path energy (eV): [0.00059789 0.01520996 0.02859394 0.03864919 0.04396132 0.04383169 0.03830514 0.02811655 0.01467143 0.00001228]
+distance between beads in mass scaled coordinate: [2.37545826 2.3866034  2.38426672 2.37526776 2.3874192  2.37827843 2.38199591 2.38357375 2.36864084]
+
+
+@Finish Inner loop: outer loop step 15, LI-NEB inner loop step 0
+
+
+
+
+
+
+@Start outer loop: 15
+
+@LI-NEB/String converge on GPR PES
+optimization step so far for neb stage: 92
+The trust region for the gpr model now: 0.2
+@update GPR model. Bead index: []
+@Outerloop Exit info: ab initio |f|: [0.01740213 0.0156374  0.01268657 0.00875815 0.00515227 0.00557021 0.00944168 0.01335901 0.01638178 0.01817847]
+@Outloop Exit info: GPR predicted |f_GPR|: [0.01738013 0.01556032 0.01253923 0.00862828 0.00504815 0.00550085 0.00937441 0.0133116  0.01626138 0.01825643]
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00712494 0.07040469 0.08347904 0.06471368 0.04972604 0.0646628  0.04395589 0.03130789 0.04134278 0.04773799]
+@Outerloop Exit info: max(|f_GPR - f|/|f|): 0.08347904174827561
+@Outerloop Exit info: |f_GPR -f| :[0.00012399 0.00110095 0.00105906 0.00056677 0.0002562  0.00036019 0.00041502 0.00041824 0.00067727 0.0008678 ]
+After update:
+@Outerloop Exit info: |f_GPR -f|/|f|:[0.00712494 0.07040469 0.08347904 0.06471368 0.04972604 0.0646628  0.04395589 0.03130789 0.04134278 0.04773799]
+@Outerloop Exit info: |f_GPR -f| :[0.00012399 0.00110095 0.00105906 0.00056677 0.0002562  0.00036019 0.00041502 0.00041824 0.00067727 0.0008678 ]
+Finish Outerloop: 16
+
+
+
+
+absolute force error cutoff: 0.001
+relative force error cutoff: 0.05
+@Outerloop Exit info: The GPR predicted force is not accurate enough but the force error is not changing. Exit the outer loop.
+@Exit step: NEB_instanton: path optimization converged. Step 16 
+
+Training data successfully stored in LINEB_beads/training_data.h5
+Training data successfully stored in neb_final_gpr_training/training_data.h5
+data for coordinate transformer successfully stored
+ @NEB Outerloop STEP 16, stage: instanton
+Now generate instanton path from Minimum Action Path (MAP) found by NEB.
+total optimization step for neb stage: 92
+use cubic interpolation to generate MAP path
+step number: 100
+r_distance: 0.22186351807108054,  v_r: 0.002131453097756974
+total energy: -0.004101148249080771
+step number: 200
+r_distance: 0.7405503518103442,  v_r: 0.0022572643023470733
+total energy: -0.004101236790469635
+step number: 300
+r_distance: 0.9943046808928062,  v_r: 0.00013956352315954375
+total energy: -0.004103267769898641
+Type of calculation: rate
+final r at the end of dynamical evolution: 0.9952290712869176
+total energy during evolution: [-0.004101148249080771, -0.004101236790469635, -0.004103267769898641]
+finish evolution of dynamics along Minimum Action path, the period of motion is: 1269.1801511000047
+temperature for instanton path : 248.80208055325988 K
+the running time for the constrained dynamics along the path is: 0.1348654930500004 min.
+imaginary time list for ring polymer: [ 15.86475189  47.59425567  79.32375944 111.05326322 142.782767   174.51227078 206.24177455 237.97127833 269.70078211 301.43028589 333.15978966 364.88929344 396.61879722 428.348301   460.07780477 491.80730855 523.53681233 555.26631611 586.99581988 618.72532366]
+Backup performed: inst.rp_time_FINAL.txt -> #inst.rp_time_FINAL.txt#0#
+ @NEB Outerloop STEP 17, stage: instanton
+Now generate instanton path from Minimum Action Path (MAP) found by NEB.
+total optimization step for neb stage: 92
+ @NEB Outerloop STEP 18, stage: converged
+ab initio calculation number : 53
+the running time for the program: 9.946305902083333 min.
+SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 8390484352)> neb calculation converged. Instanton geometry calculation finishes. Exiting simulation
+ !W! Soft exit has been requested with message: 'neb calculation converged. Instanton geometry calculation finishes. Exiting simulation
+I-PI reports success. Restartable as is: NO.'. Cleaning up.
+ @SOCKET: Shutting down the driver interface.
+ @SOCKET: Problem shutting down the server socket. Will just continue and hope for the best.
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step

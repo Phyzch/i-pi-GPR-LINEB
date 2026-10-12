@@ -1,0 +1,136 @@
+<simulation mode="static" verbosity="medium" threading="false">
+    <output prefix='inst'>
+        <properties stride='1' filename='out'>  [ step, potential{electronvolt}] </properties>
+   </output>
+
+   <total_steps> 101       </total_steps>
+
+   <ffsocket name="nwchem" mode="inet" pbc="false" >
+       <address> localhost </address>  
+       <latency> 1.0000e-02</latency>
+       <slots> 4 </slots>
+       <port> 31415 </port>
+       <timeout> 6.000e+02 </timeout>
+   </ffsocket>
+
+   <system>
+       <initialize nbeads='10'>   <!-- nbeads: number of beads for representing Line Integral Nudged Elastic Band -->
+           <file mode='xyz' >  init.xyz </file>
+       </initialize>
+       
+       <forces>
+          <force forcefield="nwchem"> </force>
+       </forces>
+
+       <ensemble>
+          <temperature units='kelvin'> 275 </temperature>
+       </ensemble>
+
+       <normal_modes>
+       <open_paths>  [0, 1, 2, 3, 4, 5, 6, 7, 8]    </open_paths>
+       </normal_modes>
+
+       <motion mode='nebinstantongpr'>
+	    <nebinstantongpr mode='FIRE'>
+
+	    <!-- stage of the algorithm. There are three stages: neb, instanton or converged -->
+	    <!-- For path optimization, put in neb -->
+            <stage> neb </stage>
+
+	    <!-- number of ring polymer instanton beads for the interpolated instanton path. -->
+            <instanton_bead_number>  20 </instanton_bead_number>
+
+	    <asr> poly </asr>
+	    <alt_out> 2 </alt_out>
+	   
+	   <!-- convergence criterion for LI-String / LI-NEB method -->
+	   <tolerances>  
+	   <gradient>  5e-3  </gradient> 
+           <gradient_end_bead> 5e-3 </gradient_end_bead>
+	   <action_forces_sum> 5e-3 </action_forces_sum>
+	    </tolerances>
+	   
+	   <!-- Parameter for FIRE algorithm for optimization --> 
+	    <FIRE> 
+		<tmax> 3.0 </tmax>
+		<tmin> 0.1 </tmin>
+		<Ndelay> 5 </Ndelay>
+		<finc> 1.1 </finc>
+   		<fdec> 0.5 </fdec> 
+		<alpha0> 0.15 </alpha0>
+  		<alpha_shrink> 0.99 </alpha_shrink>
+		<Nmax> 100 </Nmax>
+		<maxstep> 100 </maxstep>
+		<neb_step_update_kappa> 20 </neb_step_update_kappa>
+	    </FIRE>
+		
+	    <dynamical_adjust_ratio>
+		<spring_k> 0.1 </spring_k>
+                <kappa> 0.2  </kappa>
+	    </dynamical_adjust_ratio>
+	    
+	    <!-- optimization method. string or neb --> 
+	    <opt> string </opt>
+
+	    <!-- reactant state energy -->
+	    <energy_shift>  -267.148010 </energy_shift>  <!-- we can use units='electronvolt' etc to specify the unit of energy shift. If not specified, Hatree unit is assumed  -->
+            
+                <time_step units='femtosecond'>  0.05   </time_step>  <!-- time step for neb move -->
+                <instanton_time_step units='femtosecond'> 0.05  </instanton_time_step>  <!-- time step for move along Minimum action path to generate instanton -->
+
+		<instanton_path_energy units='electronvolt'> 0.111 </instanton_path_energy>  <!-- energy of end beads relative to energy shift. This defines the temperature of our Minimum Action Path. -->
+		
+		<end_bead_energy_converge_value units='electronvolt'> 
+		0.002 
+		</end_bead_energy_converge_value>
+
+		<!-- Parameters below are for GPR surrogate modeling -->
+		<gpr_relative_force_error_criterion>  0.05 </gpr_relative_force_error_criterion>   <!-- criterion to stop the outer loop for surrogate model update when relative gpr force error is below gpr_force_criterion -->
+		<gpr_absolute_force_error_criterion> 0.001 </gpr_absolute_force_error_criterion> <!-- criterion to stop outer loop for surrogate model update when absolute gpr force error is below gpr_absolute_force_criterion -->
+		
+		<gpr_force_uncertainty_criterion> 1e-3 </gpr_force_uncertainty_criterion>
+		<gpr_trust_region> 0.2 </gpr_trust_region>  <!-- trust region to stop the inner loop -->
+
+		<gpr_SE_kernel_number> 1 </gpr_SE_kernel_number>  <!-- number of Squared Exponential kernels to add together to form kernel of GPR -->
+
+		<gpr_kernel_outputscale_constraint>
+			<min> 0.0 </min>
+			<max> 100.0 </max>
+		</gpr_kernel_outputscale_constraint>
+
+		<gpr_kernel_outputscale>
+			[0.1]
+		</gpr_kernel_outputscale>   <!-- mean value of prior of output scale of kernel. length should match Squared Exponential kernel number -->
+
+		<gpr_kernel_lengthscale_ratio_constraint>
+			<min> 0.0 </min>
+			<max>   10.0   </max>
+		</gpr_kernel_lengthscale_ratio_constraint>
+
+		<gpr_kernel_lengthscale_ratio>  
+                		[1.0] 
+		</gpr_kernel_lengthscale_ratio>   <!-- mean value of prior of length scale. array. length should match Squared Exponential kernel number -->
+
+		<gpr_noise_std>  <!-- the size of noise term for potential and force should be different --> 
+                <pot_noise_prior>   1e-6  </pot_noise_prior>     <!-- pot noise in cartesian coordinate. Hatree unit -->
+                <force_noise_prior> 1e-4  </force_noise_prior>   <!-- noise in cartesian coordinate. Hatree / a.u. -->
+		</gpr_noise_std>  		
+
+
+		<!-- Cartesian dofs that keep as fixed during GPR surrogate modeling -->
+	   	<fix_dofs> [2, 5, 8, 10, 11, 13, 17, 20, 23, 26] </fix_dofs>
+		
+		<gpr_fix_internal_dofs_cutoff> 1e-3 </gpr_fix_internal_dofs_cutoff>
+
+		<gpr_rigid_internal_dofs_cutoff> 5e-2 </gpr_rigid_internal_dofs_cutoff>
+
+		<read_initial_gpr_training_data> False </read_initial_gpr_training_data>
+
+		<!-- Whether to compute the hessian of ring polymer beads -->
+		<final_hessian_bool>  False   </final_hessian_bool>
+
+            </nebinstantongpr>
+       </motion>
+
+   </system>
+</simulation>

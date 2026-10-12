@@ -1,0 +1,2 @@
+Qinst_trans / Qr_trans  |   Qinst_rot / Qr_rot   |   log( Qinst_vib / Qr_vib )   |   S/hbar    |  rate (ps^-1)  
+    1.000  |      0.928   |     6.978  |     7.017  |     4.650  

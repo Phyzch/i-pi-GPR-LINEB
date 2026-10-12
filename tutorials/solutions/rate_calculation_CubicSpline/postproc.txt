@@ -1,0 +1,29 @@
+
+We are ready to start. Reading RESTART ... (This can take a while)
+Use the energy shift (reactant energy) with the provided values from terminal (unit eV)
+
+Temperature: 250.0 K
+NBEADS: 40
+atoms:  9
+ASR:    poly
+1/(betaP*hbar) =  0.03167
+Diagonalization ... 
+
+
+Final lowest 50 frequencies (cm^-1)
+[-875.06 167.93 372.54 399.36 471.05 575.10 782.44 896.95 982.09 1043.31 1069.98 1089.07 1089.17
+ 1089.86 1089.86 1089.88 1089.88 1089.88 1089.88 1090.09 1090.45 1090.55 1090.76 1095.84 1124.37
+ 1146.85 1152.55 1160.70 1161.25 1231.52 1232.95 1233.12 1240.89 1245.34 1341.71 1341.81 1345.89
+ 1384.32 1436.89 1439.41 1467.17 1467.25 1509.38 1509.40 1513.19 1527.65 1527.92 1564.79 1566.26
+ 1635.83]
+log determinant obtained using the exact diagonalization: -7198.5700746899665, time 0.003920020833333338 min.
+instanton path is printed to file: instanton_path.xyz
+Deleted frequency:  167.933 cm^-1
+
+We are done. Instanton rate. Nbeads 40 (diff only 20.0)
+V0  -7269.466900000001 eV ( -167525.79578124662 Kcal/mol) 
+   BN       (BN*N)    | Qt(bohr^-3) | Qrot        | log(Qvib*N) | S/hbar   ( S1/hbar ,S2/hbar  ) |
+  58.441 ( 2337.626 ) |      67.341 |   47681.836 |     -79.365 |    7.017 (    6.092    0.925 ) |
+
+
+

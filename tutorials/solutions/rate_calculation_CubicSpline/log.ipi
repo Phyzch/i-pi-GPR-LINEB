@@ -1,0 +1,80 @@
+ # @simulation: Fetchingffsocket
+ # Initializing system object 
+ # Initializing simulation object 
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ # Initializing from file init.xyz. Dimension: length, units: automatic, cell_units: automatic
+ !W! Momenta not specified in initialize. Will start with zero velocity if they are not specified in beads.
+ # Binding the forces 
+Import of PyFFTW unsuccessful, using NumPy library instead
+Created inet socket with address localhost and port number 31415
+ @ForceField: Starting the polling thread main loop.
+ # i-PI loaded input file:  input.xml
+All non-redundant singular values: [4.21792763 3.08235539 2.38095226 2.00082635 1.96974452 1.76275516 1.73413322 1.65218138 1.62941664 1.58918857 1.2363796  1.1883881  1.18615813 1.13829382 0.98613899 0.75345991 0.7482747  0.67199274 0.65370215 0.42742185 0.40207674]
+Number of nonzero dofs: 21
+GPytorch for force prediction:
+CUDA is not available. Running Gpytorch on CPU.
+ !W! @Warning: Planar molecules? The changes of cartesian coordinate are small.  dofs: [2, 5, 8, 11, 13, 14, 17, 23, 26].Cartesian coordinate change [0.00041024 0.00026112 0.0003957  0.00012163 0.00072524 0.00029559 0.00044993 0.00028496 0.00088747]
+@For Fixing internal dofs: for reference, train_inputs_change: [0.82438525 1.77552843 3.63323947 0.14426523 0.17478771 0.41809581 0.42914727 0.19550888 4.97208033 0.03911923 0.06713614 0.08441698 4.45981741 0.01419706 2.60012713 0.01362842 0.04199558 0.12228177 0.07220361 0.02216736 0.01428373].
+Make sure cutoff value for fixing internal dofs is appropriate. Current value: 0.001
+@gpr_model: load fixed internal dofs.
+@gpr_model: For Fixing internal dofs: fixed_internal_dofs: []
+@gpr_model: free moving dofs: [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20]
+successfully load the gpr model in gprtools.py
+Training data successfully stored in neb_final_gpr_training/training_data.h5
+data for coordinate transformer successfully stored
+the time used for construct                 gpr model to predict force along instanton path is: 0.03884669930000004 min
+
+
+@initial gpr training info: check the overfitting and underfitting of kernel length scale
+
+
+@initial Gaussian Process Regression fitting:
+error of potential prediction: [0.00002004 0.00004014 0.00000458 0.00000715 0.00000206 0.00000988 0.0000125  0.00003026 0.00000867 0.00000122 0.00003332 0.00000858 0.0000272  0.00001776 0.00004289 0.00005935 0.000005   0.00001827 0.00001814 0.0000037  0.00001541 0.00000695 0.00001267 0.00008685 0.0000097  0.00000876 0.00000966 0.0000135 ]
+error of force prediction: [0.01317744 0.01223751 0.01290574 0.01456651 0.04097684 0.06402463 0.05807852 0.01196171 0.01154593 0.01392778 0.02117209 0.01169877 0.01286328 0.01357402 0.01076826 0.01470612 0.0115838  0.01111773 0.0122552  0.01336294 0.02128837 0.01544191 0.01666582 0.01186281 0.04840102 0.06073689 0.04740097 0.03427979]
+
+
+@initial gpr training info: Test Overfitting of GPR model.
+The error in test set can be large if we start the model with a small number of data.
+In this case, the test data is out of trust region of the model.
+ @SOCKET:   Client asked for connection from ('127.0.0.1', 64957). Now hand-shaking.
+ @SOCKET:   Handshaking was successful. Added to the client list.
+ @NEB Outerloop STEP 0, stage: instanton
+Skip neb stage. Go directly into instanton stage. 
+
+Now generate instanton path from Minimum Action Path (MAP) found by NEB.
+total optimization step for neb stage: 0
+use cubic interpolation to generate MAP path
+step number: 100
+r_distance: 0.22192523565840286,  v_r: 0.002131851421514813
+total energy: -0.004101275688171887
+step number: 200
+r_distance: 0.7406103327642157,  v_r: 0.0022569654959892897
+total energy: -0.004101271428720183
+step number: 300
+r_distance: 0.9944591333110708,  v_r: 0.0001411472884664911
+total energy: -0.004102343626329329
+Type of calculation: rate
+final r at the end of dynamical evolution: 0.9953629046978548
+total energy during evolution: [-0.004101275688171887, -0.004101271428720183, -0.004102343626329329]
+finish evolution of dynamics along Minimum Action path, the period of motion is: 1273.3142884000047
+temperature for instanton path : 247.9942815904246 K
+the running time for the constrained dynamics along the path is: 0.12304760694999999 min.
+imaginary time list for ring polymer: [ 15.91642861  47.74928582  79.58214303 111.41500024 143.24785745 175.08071466 206.91357187 238.74642908 270.57928629 302.4121435  334.24500071 366.07785792 397.91071513 429.74357234 461.57642955 493.40928676 525.24214397 557.07500118 588.90785839 620.7407156 ]
+ # Average timings at MD step       0. t/step: 7.54424e+00
+ @NEB Outerloop STEP 1, stage: instanton
+Now generate instanton path from Minimum Action Path (MAP) found by NEB.
+total optimization step for neb stage: 0
+ @NEB Outerloop STEP 2, stage: converged
+ab initio calculation number : 28
+the running time for the program: 0.6082287895833335 min.
+SOFTEXIT CALLED FROM THREAD <_MainThread(MainThread, started 8287805888)> neb calculation converged. Instanton geometry calculation finishes. Exiting simulation
+ !W! Soft exit has been requested with message: 'neb calculation converged. Instanton geometry calculation finishes. Exiting simulation
+I-PI reports success. Restartable as is: NO.'. Cleaning up.
+ @SOCKET: Shutting down the driver interface.
+ @SOCKET: Problem shutting down the server socket. Will just continue and hope for the best.
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step
+SOFTEXIT: Saving the latest status at the end of the step

@@ -1,0 +1,2 @@
+Index for data point that we have computed gradients. 
+ 

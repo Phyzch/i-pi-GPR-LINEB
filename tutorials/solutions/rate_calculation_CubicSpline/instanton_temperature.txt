@@ -1,0 +1,2 @@
+temperature for instanton path : (K) 
+247.9942815904246
